@@ -1,0 +1,778 @@
+channel_number,channel_name,category,dma_id,market,provider,source_zip,notes
+1,XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+2,WPBT,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+3,WPTV,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+4,WTVX,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+5,Home Shopping Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+6,WXEL,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+7,WGN America,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+8,WPXP,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+9,WPEC,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+10,WPBF,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+11,WFLX,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+12,QVC,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+13,WFGC,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+14,WTCE,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+15,WTVXDT3 (WTVX-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+17,WHDTLP (WHDT-LP),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+18,WLRN,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+19,WBEC,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+20,Local Government Channel,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+21,WWHBCA (WWHB-CA),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+22,WSCV,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+23,Freeform,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+24,Lifetime,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+25,truTV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+26,Home & Garden Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+29,Food Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+30,MTV – Music Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+31,Paramount Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+33,ESPN,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+34,ESPN2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+35,FOX Sports Sun,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+36,The Golf Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+37,Fox Sports Florida (South),Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+38,Univision Network,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+39,Comedy Central,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+40,Cable News Network,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+41,HLN,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+42,MSNBC,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+43,CNBC,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+44,Fox News Channel,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+45,SYFY,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+46,E! Entertainment Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+47,USA Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+48,Turner Network TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+49,Turner Broadcasting System,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+50,The Learning Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+51,History,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+52,Animal Planet,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+53,The Discovery Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+54,A&E Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+55,AMC,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+56,Bravo,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+57,Hallmark Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+58,The Weather Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+59,Disney Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+60,Cartoon Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+61,Nickelodeon,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+62,TV Land,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+63,Community Channel,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+64,BET,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+65,VH1,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+66,FX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+67,The Travel Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+79,HSN2,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+80,EVINE Live,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+81,Country Music Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+82,CSPAN2,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+83,Oxygen,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+92,COMMUNITY BULLETIN BOARD,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+93,Community Billboard,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+94,Community Access – COAC,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+95,Community Programming – COMMPRG,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+97,CSPAN,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+98,POP,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+99,Community TV Channel,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+102,ESPNEWS,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+103,Bloomberg Business Television,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+104,CSPAN2,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+105,CSPAN3,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+106,Fox Business,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+108,National Geographic Wild,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+109,National Geographic USA,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+110,Science,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+111,Investigation Discovery,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+112,American Heroes Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+113,Destination America,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+114,BBC America,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+115,FYI,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+116,Viceland,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+117,WE tv,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+119,Lifetime Movies,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+120,El Rey Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+121,Do-It-Yourself Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+122,Cooking Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+123,Oxygen,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+125,Oprah Winfrey Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+128,Universal Kids,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+129,Nicktoons Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+130,Discovery Family Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+131,Nick Jr,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+132,Nick Too East,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+133,Teen Nick,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+134,Starz Encore Family SD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+135,Disney XD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+136,Disney Junior US,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+139,Nick Music,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+140,MTV2: Music Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+141,"Tr3s: MTV, Musica y Mas",Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+142,BET Jams,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+143,MTV Classic,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+144,BET Her,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+145,CMT Music,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+146,Country Music Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+147,Great American Country,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+149,MoviePlex,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+150,Starz Encore,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+152,Starz Encore Action,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+154,Starz Encore Suspense,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+156,Starz Encore Classic,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+158,Starz Encore Black,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+160,Starz Encore Westerns SD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+163,LOGO,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+164,IFC,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+165,SundanceTV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+167,IndiePlex,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+168,RetroPlex,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+169,Turner Classic Movies,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+170,Flix,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+171,BBC World News (North America),News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+173,TV ONE,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+176,ReelzChannel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+177,Primo TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+178,Kids Central,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+179,Game Show Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+180,NFL NETWORK,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+182,Discovery Life Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+188,Jewelry Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+189,UP,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+199,XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+200,WPBTDT4 (WPBT-DT4),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+204,WPBTDT2 (WPBT-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+205,WPBTDT3 (WPBT-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+208,WPBFDT2 (WPBF-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+209,WPBFDT3 (WPBF-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+213,WPECDT2 (WPEC-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+214,WPECDT3 (WPEC-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+216,WPTVDT2 (WPTV-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+217,WPTVDT3 (WPTV-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+218,WPTVDT4 (WPTV-DT4),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+220,WFLXDT2 (WFLX-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+221,WFLXDT3 (WFLX-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+229,WSCVDT2 (WSCV-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+234,Educational Programming,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+235,Education Access,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+239,Jewish Life TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+240,Impact Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+241,Daystar Television Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+243,Eternal Word Television Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+244,INSP,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+246,BabyFirst TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+247,The Word Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+248,The Cowboy Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+255,Ovation TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+256,Hallmark Movies & Mysteries,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+257,Newsy SD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+259,FXM,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+280,EVINE Live,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+297,Epix HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+298,Free Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+299,HBO On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+301,HBO HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+302,HBO,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+303,HBO2,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+304,HBO Signature,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+305,HBO Family,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+306,HBO Comedy,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+307,HBO (Pacific),Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+311,HBO Zone,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+312,HBO Latino,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+319,CineMAX HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+320,CineMAX,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+321,MoreMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+322,CineMAX (Pacific),Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+324,ActionMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+325,ThrillerMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+327,MovieMax,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+328,Cinemax Spanish,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+329,5 StarMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+330,OuterMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+336,Showtime Familyzone,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+339,Showtime HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+340,Showtime,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+341,SHO 2,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+342,Showtime Showcase,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+346,Showtime Beyond,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+347,Showtime Extreme,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+350,The Movie Channel,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+352,The Movie Channel Extra,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+369,Starz HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+370,Starz,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+371,Starz Edge,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+372,Starz in Black,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+373,Starz Kids,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+374,Starz Cinema,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+375,Starz Comedy,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+376,Oxygen HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+377,BBC America HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+378,Galavision Cable Network HD,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+379,Univision Network HD,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+380,The Weather Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+381,WLRNDT (WLRN-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+383,Game Show Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+384,HSN HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+385,Hallmark Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+386,UP HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+387,Investigation Discovery HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+388,Viceland HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+389,National Geographic Wild HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+390,NFL RedZone HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+391,WGN America HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+392,FXX HD,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+394,Tennis Channel HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+395,Turner Classic Movies HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+396,ESPNU HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+397,HLN HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+398,truTV HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+399,MSNBC HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+400,Bloomberg HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+401,Fox Sports Florida HD South,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+402,FOX Sports Sun HD (Alt.),Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+403,ESPNHD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+404,ESPN2 HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+405,The Golf Channel HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+406,NFL Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+407,Turner Network TV HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+408,NBCSN HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+409,Olympic Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+410,A&E Network HD East,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+411,MTVLIVE,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+412,MOTORTREND HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+413,National Geographic HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+414,Food Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+415,Home & Garden Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+416,HBO HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+417,CineMAX HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+418,Showtime HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+419,Starz HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+420,USA Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+421,TBS HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+422,History HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+423,CNN HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+424,The Discovery Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+425,The Learning Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+426,Animal Planet HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+427,Syfy HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+428,Fox News Channel HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+429,AMC HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+430,WTCNCD (WTCN-CD),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+431,WPBFDT (WPBF-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+432,WPTVDT (WPTV-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+433,WPECDT (WPEC-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+434,WFLXDT (WFLX-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+435,WTVXDT (WTVX-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+436,WFGCDT (WFGC-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+437,WPBTDT (WPBT-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+438,WHDTDT (WHDT-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+439,WPXPDT (WPXP-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+440,WXELDT (WXEL-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+441,WSCVDT (WSCV-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+442,Cartoon Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+443,Nickelodeon HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+444,Freeform HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+445,Disney Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+446,Science Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+447,Disney XD HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+448,Universal Kids HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+449,ESPNEWS HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+450,Fox Sports 1 HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+451,FX HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+452,Paramount Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+453,Comedy Central HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+455,WE tv HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+456,IFC HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+457,E! Entertainment Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+458,The Travel Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+459,Lifetime HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+460,MGM HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+461,EVINE Live,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+462,Bravo HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+463,TV ONE HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+464,FYI Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+465,Lifetime Movies HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+466,Destination America HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+467,Starz Encore HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+468,Hallmark Movies & Mysteries HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+469,Fox Business HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+470,CNBC HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+471,QVC HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+473,MTV – Music Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+474,VH1 HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+475,BET HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+476,Country Music Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+477,NHL Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+478,NBA TV HDTV,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+479,MLB Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+480,HBO2 HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+481,HBO Signature HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+484,HBO Zone HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+485,HBO Latino HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+486,SEC Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+487,WTCEDT (WTCE-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+488,WBECDT (WBEC-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+501,In Demand PPV No Preshow (SD Events),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+502,Comcast PPV En Español,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+503,SHO 2 HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+507,The Movie Channel HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+509,Comcast iND HD +C,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+510,Starz Edge HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+512,Starz Kids HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+514,Starz Comedy HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+530,HD -XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+531,HD Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+532,HD Premium Channels – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+533,Music – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+534,Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+540,Adult – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+541,VividTV (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+542,Hustler (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+543,Playboy Premium,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+546,XTSY XX5 (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+548,Ten XX.5 (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+549,Penthouse TV XX.5 – 6hr Blocks,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+550,Juicy (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+565,HD -XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+566,HD Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+567,HD Premium Channels – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+568,Music – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+569,Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+590,UniMas,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+593,Fox Deportes HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+594,ESPN Deportes HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+600,XFINITY Latino,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+601,Discovery en Español SD,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+602,CNN en Español,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+603,Fox Deportes,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+604,Univision Deportes Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+605,"Tr3s: MTV, Musica y Mas",Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+606,History Channel En Español,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+607,WSCVDT2 (WSCV-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+608,Cine Latino US,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+609,ViendoMovies,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+610,Cine Mexicano US Feed,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+611,WWHBCA (WWHB-CA),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+612,ESPN Deportes,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+613,Galavision Cable Network,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+616,WPBFDT2 (WPBF-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+618,HITN,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+619,Mexicanal,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+620,FoxLife US,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+621,Cinema Dinamita,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+624,Video Rola,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+625,Telemundo Television Network (Pacific),Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+628,Canal Sur,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+630,RCN Nuestra Tele,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+631,TV Chile Internacional,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+632,Vme Kids (SD Feed),Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+633,ETBN Enlace USA,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+634,BabyFirst Americas Spanish,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+635,FM,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+636,UNIVERSO,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+637,EWTN Español,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+641,Canal Once,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+642,Multimedios USA,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+643,Teleformula,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+647,BandaMax US Feed,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+648,WAPA America,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+649,DOMINICANA,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+651,RMS,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+652,CARACOL INTERNATIONAL,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+654,TV Venezuela,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+655,TVE America Television Española,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+657,Telefe Internacional,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+658,Discovery Familia En Español,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+659,Ecuavisa International,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+660,Sur Peru,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+661,Centroamerica TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+662,Pasiones TV US,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+665,FM,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+670,Telehit USA Feed (SD Feed),Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+673,Starz Encore Español SD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+674,Cine Sony Television SD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+675,Latin American Sports,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+676,Univision Network,Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+677,Univision Network (Pacific),Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+678,De Pelicula US Feed SD Feed,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+679,De Pelicula Clasico,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+684,UniMas (Pacific),Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+685,RTN-WMNB,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+686,Channel One Russia Worldwide Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+687,Rai Italia,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+693,Rede Globo TV Internacional,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+697,TV5MONDE Etats Unis,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+698,The Israeli Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+717,Crime & Investigation Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+718,Military History Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+720,TV Games Network 2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+721,TV Games Network SD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+722,ESPNEWS,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+727,SEC Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+728,FXX,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+730,NBCSN,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+731,Outdoor Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+732,Fox Sports 1,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+734,NBA TV,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+735,ESPNU,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+737,Tennis Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+738,The Sportsman Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+739,NHL Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+740,Fox Sports 2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+741,MLB Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+742,Big Ten Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+744,CBS Sports Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+745,NFL RedZone,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+749,NBA TV,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+751,NBA League Pass 1,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+752,NBA League Pass 2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+753,NBA League Pass 3,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+754,NBA League Pass 4,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+755,NBA League Pass 5,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+756,NBA League Pass 6,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+757,NBA League Pass 7,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+758,NBA League Pass 8,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+759,NBA League Pass 9,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+760,NBA League Pass 10,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+764,Pac-12 Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+766,ESPN Goal Line and Bases Loaded,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+767,SECA,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+768,SECB,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+771,GAME 1,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+772,GAME 2,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+773,GAME 3,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+774,GAME 4,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+775,GAME 5,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+776,GAME 6,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+777,GAME 7,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+778,GAME 8,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+779,GAME 9,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+780,GAME 10,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+781,GAME 11,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+782,GAME 12,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+783,GAME 13,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+784,GAME 14,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+801,Music Choice: Hit List,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+802,Music Choice: Max,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+803,Music Choice: Dance/EDM,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+804,Music Choice: Indie,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+805,Music Choice: Hip-Hop and R&B,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+806,Music Choice: Rap,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+807,Music Choice: Hip-Hop Classics,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+808,Music Choice: Throwback Jams,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+809,Music Choice: R&B Classics,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+810,Music Choice: R&B Soul,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+811,Music Choice: Gospel,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+812,Music Choice: Reggae,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+813,Music Choice: Rock,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+814,Music Choice: Metal,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+815,Music Choice: Alternative,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+816,Music Choice: Adult Alternative,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+817,Music Choice: Rock Hits,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+818,Music Choice: Classic Rock,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+819,Music Choice: Soft Rock,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+820,Music Choice: Love Songs,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+821,Music Choice: Pop Hits,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+822,Music Choice: Party Favorites,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+823,Music Choice: Teen Beats,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+824,Music Choice: Kidz Only!,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+825,Music Choice: Toddler Tunes,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+826,Music Choice: Y2K,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+827,Music Choice: ’90s,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+828,Music Choice: ’80s,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+829,Music Choice: ’70’s,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+830,Music Choice: Solid Gold Oldies,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+831,Music Choice: Pop & Country,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+832,Music Choice: Today’s Country,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+833,Music Choice: Country Hits,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+834,Music Choice: Classic Country,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+835,Music Choice: Contemporary Christian,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+836,Music Choice: Pop Latino,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+837,Music Choice: Musica Urbana,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+838,Music Choice: Mexicana,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+839,Music Choice: Tropicales,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+840,Music Choice: Romances,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+841,Music Choice: Sounds of the Seasons,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+842,Music Choice: Stage & Screen,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+843,Music Choice: Soundscapes,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+844,Music Choice: Smooth Jazz,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+845,Music Choice: Jazz,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+846,Music Choice: Blues,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+847,Music Choice: Singers & Swing,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+848,Music Choice: Easy Listening,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+849,Music Choice: Classical Masterpieces,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+850,Music Choice: Light Classical,Music,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+886,Entertainment – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+887,SHOP 887 On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+889,Automotive – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+890,My Government – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+891,Travel and Leisure Destinations On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+892,Searchlight On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+893,Searchlight On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+998,Comcast Community Network,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1000,XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1002,WPBTDT (WPBT-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1003,EVINE Live,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1005,WPTVDT (WPTV-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1006,HSN HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1009,WHDTDT (WHDT-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1010,HSN2,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1012,WPECDT (WPEC-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1013,Jewelry Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1017,WLRNDT (WLRN-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1018,QVC HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1021,WTCEDT (WTCE-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1025,WPBFDT (WPBF-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1029,WFLXDT (WFLX-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1034,WTVXDT (WTVX-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1036,WTCNCD (WTCN-CD),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1042,WXELDT (WXEL-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1043,WTVXDT3 (WTVX-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1048,WWHBCA (WWHB-CA),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1051,WSCVDT (WSCV-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1061,WFGCDT (WFGC-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1063,WBECDT (WBEC-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1067,WPXPDT (WPXP-DT),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1090,Local Government Channel,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1092,Educational Programming,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1093,Educational Programming,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1102,The Weather Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1110,Fox News Channel HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1111,CNN HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1112,HLN HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1113,MSNBC HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1114,Newsy SD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1117,BBC World News (North America),News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1121,CNBC HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1122,Bloomberg HD,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1123,Fox Business HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1128,CSPAN,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1129,CSPAN2,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1130,CSPAN3,News,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1183,WPTVDT4 (WPTV-DT4),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1187,WSCVDT2 (WSCV-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1188,Telemundo Television Network (Pacific),Spanish/Intl,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1189,WPTVDT2 (WPTV-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1190,WPTVDT3 (WPTV-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1191,WPECDT2 (WPEC-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1192,WPECDT3 (WPEC-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1193,WPBTDT3 (WPBT-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1194,WPBTDT4 (WPBT-DT4),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1195,WPBTDT2 (WPBT-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1196,WPBFDT3 (WPBF-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1197,WPBFDT2 (WPBF-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1198,WFLXDT3 (WFLX-DT3),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1199,WFLXDT2 (WFLX-DT2),Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1201,Comcast iND HD +C,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1205,ESPNHD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1206,ESPN2 HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1207,NBCSN HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1208,Fox Sports 1 HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1209,Fox Sports 2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1210,ESPNEWS HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1215,NFL Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1216,NFL RedZone HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1217,NHL Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1218,NBA TV HDTV,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1219,MLB Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1222,Olympic Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1223,The Golf Channel HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1224,Tennis Channel HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1229,Univision Deportes Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1230,Fox Deportes HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1231,ESPN Deportes HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1232,UNIVERSO,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1236,Outdoor Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1237,The Sportsman Channel,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1243,MOTORTREND HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1246,TV Games Network SD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1247,TV Games Network 2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1250,Fox Sports Florida HD South,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1251,FOX Sports Sun HD (Alt.),Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1301,ESPNU HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1302,ESPN Goal Line and Bases Loaded,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1303,CBS Sports Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1313,Big Ten HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1321,SEC Network HD,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1322,SECA,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1323,SECB,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1329,Pac-12 Network,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1372,GAME 1,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1373,GAME 2,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1374,GAME 3,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1375,GAME 4,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1376,GAME 5,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1377,GAME 6,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1378,GAME 7,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1379,GAME 8,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1380,GAME 9,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1381,GAME 10,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1382,GAME 11,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1383,GAME 12,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1384,GAME 13,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1385,GAME 14,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1388,NBA League Pass 1,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1389,NBA League Pass 2,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1390,NBA League Pass 3,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1391,NBA League Pass 4,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1392,NBA League Pass 5,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1393,NBA League Pass 6,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1394,NBA League Pass 7,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1395,NBA League Pass 8,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1396,NBA League Pass 9,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1397,NBA League Pass 10,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1402,A&E Network HD East,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1403,USA Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1404,Turner Network TV HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1405,AMC HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1409,FX HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1410,FXX HD,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1411,Syfy HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1412,Paramount Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1417,El Rey Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1418,BBC America HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1420,WGN America HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1425,Game Show Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1426,TV Land,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1427,POP,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1428,WE tv HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1429,ReelzChannel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1430,truTV HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1434,TBS HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1435,Comedy Central HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1436,Viceland HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1438,IFC HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1439,LOGO,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1440,SundanceTV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1444,Investigation Discovery HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1445,Crime & Investigation Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1449,The Discovery Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1450,The Learning Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1451,Science Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1455,Lifetime HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1456,Lifetime Movies HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1457,UP HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1458,Hallmark Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1459,Hallmark Movies & Mysteries HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1462,Ovation TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1463,Bravo HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1464,Oprah Winfrey Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1465,Oxygen HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1466,E! Entertainment Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1471,Animal Planet HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1472,National Geographic Wild HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1473,National Geographic HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1478,History HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1479,Military History Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1480,American Heroes Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1484,Food Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1485,Cooking Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1486,FYI Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1487,Destination America HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1488,The Travel Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1492,Home & Garden Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1493,Do-It-Yourself Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1497,Discovery Life Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1606,MTV – Music Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1607,VH1 HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1608,Country Music Television HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1612,MTVLIVE,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1614,MTV Classic,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1615,Nick Music,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1619,CMT Music,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1620,Great American Country,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1625,BET HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1626,TV ONE HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1628,BET Her,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1633,BET Jams,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1638,FM,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1639,MTV2: Music Television,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1655,INSP,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1656,The Cowboy Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1657,Daystar Television Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1668,Eternal Word Television Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1681,The Word Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1682,Impact Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1685,Jewish Life TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1701,Disney Junior US,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1702,Nick Jr,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1707,Universal Kids HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1709,BabyFirst TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1714,Discovery Family Channel,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1715,Disney Channel HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1716,Disney XD HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1721,Primo TV,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1722,Kids Central,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1727,Nicktoons Network,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1728,Nickelodeon HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1729,Nick Too East,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1734,Cartoon Network HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1740,Teen Nick,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1741,Starz Encore Family SD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1742,Freeform HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1750,Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1751,Free Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1755,Turner Classic Movies HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1756,RetroPlex,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1757,MoviePlex,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1758,IndiePlex,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1765,MGM HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1766,FXM,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1771,Flix,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1773,Starz Encore HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1775,Starz Encore Action,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1777,Starz Encore Black,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1779,Starz Encore Classic,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1782,Starz Encore Suspense,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1784,Starz Encore Westerns SD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1790,Epix HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1801,HBO On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1802,HBO HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1803,HBO (Pacific),Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1804,HBO2 HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1806,HBO Signature HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1808,HBO Family,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1810,HBO Comedy,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1812,HBO Zone HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1814,HBO Latino HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1820,CineMAX HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1821,CineMAX (Pacific),Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1822,MoreMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1824,ActionMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1826,ThrillerMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1828,MovieMax,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1830,5 StarMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1832,OuterMAX,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1834,Cinemax Spanish,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1840,Showtime HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1842,SHO 2 HD,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1844,Showtime Beyond,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1846,Showtime Showcase,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1848,Showtime Extreme,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1852,Showtime Familyzone,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1860,The Movie Channel HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1862,The Movie Channel Extra,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1868,Starz HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1870,Starz Edge HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1872,Starz in Black,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1874,Starz Kids HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1876,Starz Cinema,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1878,Starz Comedy HD,Premium/Movies,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1880,Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1881,TV Shows On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1882,Music – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1883,Sports On Demand,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1884,Xfinity Parental Controls,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1885,Adult – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1886,Playboy Premium,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1887,VividTV (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1888,Penthouse TV XX.5 – 6hr Blocks,PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1890,Hustler (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1891,XTSY XX5 (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1893,Juicy (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1894,Ten XX.5 (Comcast),PPV/Games/Adult,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1895,Xfinity Parental Controls,Entertainment,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1896,Sports On Demand,Sports,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1897,Music – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1898,TV Shows On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1899,Movies – XFINITY On Demand,On Demand,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
+1999,Emergency Alert Channel,Local/OTA,548,West Palm Beach-Ft Pierce,xfinity,33483/33431,Boca Raton public lineup 2024; verify at xfinity.com
