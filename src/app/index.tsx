@@ -1,5 +1,15 @@
 import { WebView } from 'react-native-webview';
-import { StyleSheet, View, Linking, Platform, ActivityIndicator, Alert } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  Linking,
+  Platform,
+  ActivityIndicator,
+  Alert,
+  AppState,
+} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import * as WebBrowser from 'expo-web-browser';
@@ -14,12 +24,23 @@ import {
 
 WebBrowser.maybeCompleteAuthSession();
 
+const APP_WEB_ORIGIN = 'https://tunedtv.com';
 const APP_OAUTH_REDIRECT = 'tunedtv://auth/callback';
 const SUPABASE_REDIRECT = 'https://tunedtv.com/~oauth/callback';
 /** Max wait for web bridge after native Apple/Google returns a token. */
 const AUTH_BRIDGE_TIMEOUT_MS = 20_000;
 /** Max wait for the full native sign-in flow (Face ID, account picker, etc.). */
 const AUTH_FLOW_TIMEOUT_MS = 120_000;
+
+// The published edge serves index.html as `no-cache` WITHOUT ETag/Last-Modified, which lets
+// iOS WKWebView reuse a stale document from NSURLCache that points at JS chunk hashes a later
+// deploy has already purged → ChunkLoadError → crash. A unique `?v` per load is a guaranteed
+// NSURLCache miss, forcing a fresh document fetch, while hashed `/assets/*` stay cached. Cookies
+// and localStorage are keyed by origin (not URL) so sign-in and prefs are untouched. Only the
+// root document is cache-busted — never auth/OAuth callback URLs.
+function buildFreshRootUrl() {
+  return `${APP_WEB_ORIGIN}/?v=${Date.now()}`;
+}
 
 function isSupabaseOAuthStart(url: string) {
   return url.includes('supabase.co/auth/v1/authorize');
@@ -136,8 +157,30 @@ export default function HomeScreen() {
   const pendingAuthSuccess = useRef(false);
   const authBridgeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const authFlowTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // iOS jettisons the WKWebView content process under memory pressure (even after a SHORT
+  // background, not just overnight), leaving a blank/white page with no JS alive to recover.
+  // Track that so we can reload on the next foreground if it happened while backgrounded.
+  const contentProcessGone = useRef(false);
+  // Timestamp of when we last went to the background, so we can force a reload on resume
+  // after a long background as a backstop in case the terminate handler didn't fire.
+  const backgroundedAt = useRef<number | null>(null);
   const [authInProgress, setAuthInProgress] = useState(false);
-  const [webUri, setWebUri] = useState('https://tunedtv.com');
+  const [loadFailed, setLoadFailed] = useState(false);
+  // Cache-busted on first mount so each cold start fetches a fresh index.html (see
+  // buildFreshRootUrl) — this is the core defense against the stale-WebView ChunkLoadError trap.
+  const [webUri, setWebUri] = useState(buildFreshRootUrl);
+
+  // Backstop reload after a long background (terminate handler is the primary fix).
+  const STALE_BACKGROUND_MS = 30 * 60 * 1000;
+
+  const reloadWebView = useCallback(() => {
+    contentProcessGone.current = false;
+    setLoadFailed(false);
+    // Navigate to a freshly cache-busted root rather than webViewRef.reload(): a plain reload
+    // re-requests the SAME URL and can be served the stale document again from NSURLCache (e.g.
+    // on resume after a deploy shipped while backgrounded). A new `?v` guarantees a fresh fetch.
+    setWebUri(buildFreshRootUrl());
+  }, []);
 
   const clearAuthTimeouts = useCallback(() => {
     if (authBridgeTimeoutRef.current) {
@@ -153,6 +196,28 @@ export default function HomeScreen() {
   useEffect(() => {
     configureNativeAuth();
   }, []);
+
+  // Recover from a terminated WebView content process: if iOS killed it while we were
+  // backgrounded, reload as soon as the app returns to the foreground so the user never
+  // lands on a white screen on reopen.
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', (state) => {
+      if (state === 'active') {
+        const wasStale =
+          backgroundedAt.current != null &&
+          Date.now() - backgroundedAt.current > STALE_BACKGROUND_MS;
+        if (contentProcessGone.current || wasStale) {
+          reloadWebView();
+        }
+        backgroundedAt.current = null;
+      } else if (state === 'background' || state === 'inactive') {
+        if (backgroundedAt.current == null) {
+          backgroundedAt.current = Date.now();
+        }
+      }
+    });
+    return () => subscription.remove();
+  }, [reloadWebView]);
 
   const stopWebViewOAuth = useCallback(() => {
     webViewRef.current?.stopLoading();
@@ -289,6 +354,27 @@ export default function HomeScreen() {
         contentInsetAdjustmentBehavior="never"
         scalesPageToFit={false}
         injectedJavaScriptBeforeContentLoaded={Platform.OS === 'ios' ? IOS_WEBVIEW_INJECT : undefined}
+        onContentProcessDidTerminate={() => {
+          // WKWebView content process was killed (iOS, typically memory pressure).
+          // Reload now if we're in the foreground; otherwise flag it for the next resume.
+          if (AppState.currentState === 'active') {
+            reloadWebView();
+          } else {
+            contentProcessGone.current = true;
+          }
+        }}
+        onRenderProcessGone={() => {
+          // Android equivalent: the render process was reclaimed; reload to recover.
+          reloadWebView();
+        }}
+        onError={(event) => {
+          // Top-frame load failure — surface a retry instead of a bare white screen.
+          // Ignore subframe errors so an ad/analytics failure doesn't blank the app.
+          if (event.nativeEvent.url?.includes('tunedtv.com') ?? true) {
+            setLoadFailed(true);
+          }
+        }}
+        onLoad={() => setLoadFailed(false)}
         onMessage={(event) => {
           if (Platform.OS !== 'ios') {
             return;
@@ -354,6 +440,15 @@ export default function HomeScreen() {
           <ActivityIndicator size="large" color="#fff" />
         </View>
       )}
+      {loadFailed && (
+        <View style={styles.errorOverlay}>
+          <Text style={styles.errorTitle}>Couldn’t load TunedTV</Text>
+          <Text style={styles.errorBody}>Check your connection and try again.</Text>
+          <TouchableOpacity style={styles.retryButton} onPress={reloadWebView}>
+            <Text style={styles.retryButtonText}>Retry</Text>
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 }
@@ -372,5 +467,38 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  errorOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#000',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 32,
+  },
+  errorTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '600',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  errorBody: {
+    color: '#9ca3af',
+    fontSize: 14,
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  retryButton: {
+    backgroundColor: '#2563eb',
+    paddingHorizontal: 28,
+    paddingVertical: 12,
+    borderRadius: 10,
+    minHeight: 44,
+    justifyContent: 'center',
+  },
+  retryButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
