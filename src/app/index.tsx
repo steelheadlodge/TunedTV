@@ -21,6 +21,11 @@ import {
   parseWebAuthRequest,
   parseWebAuthResult,
 } from '@/lib/nativeAuthBridge';
+import {
+  buildPushTokenBridgeScript,
+  registerForPushTokenAsync,
+  type PushRegistration,
+} from '@/lib/pushNotifications';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -167,6 +172,9 @@ export default function HomeScreen() {
   // Heartbeat: on resume we ping the web context; if no 'pong' comes back, the WKWebView
   // content process died silently (no terminate callback) and we reload to avoid a white screen.
   const heartbeatTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Expo push token, once the device is registered. Handed to the web app so it can store
+  // the token against the signed-in Supabase user for match-reminder pushes.
+  const pushRegRef = useRef<PushRegistration | null>(null);
   const [authInProgress, setAuthInProgress] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
   // Cache-busted on first mount so each cold start fetches a fresh index.html (see
@@ -220,6 +228,23 @@ export default function HomeScreen() {
 
   useEffect(() => {
     configureNativeAuth();
+  }, []);
+
+  // Register for push on launch (best-effort) and hand the token to the web app so it can
+  // associate it with the signed-in Supabase user. If the WebView is already loaded we inject
+  // immediately; otherwise onLoad re-injects once the token is available.
+  useEffect(() => {
+    let cancelled = false;
+    registerForPushTokenAsync().then((reg) => {
+      if (cancelled || !reg) {
+        return;
+      }
+      pushRegRef.current = reg;
+      webViewRef.current?.injectJavaScript(buildPushTokenBridgeScript(reg));
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Recover from a terminated WebView content process: if iOS killed it while we were
@@ -414,7 +439,14 @@ export default function HomeScreen() {
             setLoadFailed(true);
           }
         }}
-        onLoad={() => setLoadFailed(false)}
+        onLoad={() => {
+          setLoadFailed(false);
+          // Re-hand the push token after each (re)load so it survives reloads/navigation and
+          // the case where the token arrived before the page was ready.
+          if (pushRegRef.current) {
+            webViewRef.current?.injectJavaScript(buildPushTokenBridgeScript(pushRegRef.current));
+          }
+        }}
         onMessage={(event) => {
           const raw = event.nativeEvent.data;
           if (raw === 'tunedtv:pong') {

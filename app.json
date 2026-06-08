@@ -2,7 +2,7 @@
   "expo": {
     "name": "TunedTV",
     "slug": "TunedTV",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "tunedtv",
@@ -30,6 +30,7 @@
       "expo-router",
       "expo-web-browser",
       "expo-apple-authentication",
+      "expo-notifications",
       [
         "@react-native-google-signin/google-signin",
         {
