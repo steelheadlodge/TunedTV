@@ -23,7 +23,8 @@ import {
 } from '@/lib/nativeAuthBridge';
 import {
   buildPushTokenBridgeScript,
-  registerForPushTokenAsync,
+  getPushTokenIfGranted,
+  requestPushToken,
   type PushRegistration,
 } from '@/lib/pushNotifications';
 
@@ -230,22 +231,35 @@ export default function HomeScreen() {
     configureNativeAuth();
   }, []);
 
-  // Register for push on launch (best-effort) and hand the token to the web app so it can
-  // associate it with the signed-in Supabase user. If the WebView is already loaded we inject
-  // immediately; otherwise onLoad re-injects once the token is available.
+  // On launch, silently fetch the push token ONLY if permission was already granted (no cold
+  // prompt) and hand it to the web app so a previously opted-in user re-registers. The first-time
+  // permission prompt is triggered later by the worldCupPushOptIn toggle (see handlePushEnable).
+  const handlePushRegistration = useCallback((reg: PushRegistration | null) => {
+    if (!reg) {
+      return;
+    }
+    pushRegRef.current = reg;
+    webViewRef.current?.injectJavaScript(buildPushTokenBridgeScript(reg));
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
-    registerForPushTokenAsync().then((reg) => {
-      if (cancelled || !reg) {
+    getPushTokenIfGranted().then((reg) => {
+      if (cancelled) {
         return;
       }
-      pushRegRef.current = reg;
-      webViewRef.current?.injectJavaScript(buildPushTokenBridgeScript(reg));
+      handlePushRegistration(reg);
     });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [handlePushRegistration]);
+
+  // Web fires this when the user turns the match-reminder opt-in ON — prompt for permission at
+  // that moment (protects the one-shot iOS prompt), then hand the token back to the web bridge.
+  const handlePushEnable = useCallback(() => {
+    requestPushToken().then(handlePushRegistration);
+  }, [handlePushRegistration]);
 
   // Recover from a terminated WebView content process: if iOS killed it while we were
   // backgrounded, reload as soon as the app returns to the foreground so the user never
@@ -456,6 +470,17 @@ export default function HomeScreen() {
               heartbeatTimeoutRef.current = null;
             }
             return;
+          }
+          // Web asked us to enable push (user turned the match-reminder opt-in on). Handle on
+          // both platforms, before the iOS-only auth handling below.
+          try {
+            const message = JSON.parse(raw);
+            if (message && message.type === 'tunedtv:push:enable') {
+              handlePushEnable();
+              return;
+            }
+          } catch {
+            // not JSON — fall through to the auth handlers
           }
           if (Platform.OS !== 'ios') {
             return;

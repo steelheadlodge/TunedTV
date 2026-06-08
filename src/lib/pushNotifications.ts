@@ -15,25 +15,62 @@ Notifications.setNotificationHandler({
 
 export type PushRegistration = { token: string; platform: 'ios' | 'android' };
 
+async function ensureAndroidChannel() {
+  if (Platform.OS === 'android') {
+    await Notifications.setNotificationChannelAsync('default', {
+      name: 'Match reminders',
+      importance: Notifications.AndroidImportance.DEFAULT,
+    });
+  }
+}
+
+async function fetchToken(): Promise<PushRegistration | null> {
+  const projectId =
+    Constants?.expoConfig?.extra?.eas?.projectId ??
+    // @ts-expect-error easConfig is present in EAS builds
+    Constants?.easConfig?.projectId;
+  const res = await Notifications.getExpoPushTokenAsync(
+    projectId ? { projectId } : undefined
+  );
+  const token = res?.data;
+  if (!token) {
+    return null;
+  }
+  return { token, platform: Platform.OS === 'ios' ? 'ios' : 'android' };
+}
+
 /**
- * Register the device for push and return an Expo push token. Returns null on
- * simulators, when permission is denied, or on any error — push must NEVER block
- * or crash app startup, so everything here is best-effort and swallowed.
+ * Return a push token ONLY if permission is already granted — never prompts. Call on launch
+ * so a previously opted-in user silently re-registers their token, without nagging everyone
+ * else with a cold permission prompt. Returns null on simulators / when not granted / on error.
  */
-export async function registerForPushTokenAsync(): Promise<PushRegistration | null> {
+export async function getPushTokenIfGranted(): Promise<PushRegistration | null> {
   try {
-    // Physical device required: simulators/emulators are not issued push tokens.
     if (!Device.isDevice) {
       return null;
     }
-
-    if (Platform.OS === 'android') {
-      await Notifications.setNotificationChannelAsync('default', {
-        name: 'Match reminders',
-        importance: Notifications.AndroidImportance.DEFAULT,
-      });
+    const { status } = await Notifications.getPermissionsAsync();
+    if (status !== 'granted') {
+      return null;
     }
+    await ensureAndroidChannel();
+    return await fetchToken();
+  } catch {
+    return null;
+  }
+}
 
+/**
+ * Prompt for notification permission (the one-shot iOS prompt) and return a token if granted.
+ * Call this ONLY in response to a user action — the worldCupPushOptIn toggle — never cold on
+ * launch, so we don't burn the single permission prompt. Returns null if denied / on error.
+ */
+export async function requestPushToken(): Promise<PushRegistration | null> {
+  try {
+    if (!Device.isDevice) {
+      return null;
+    }
+    await ensureAndroidChannel();
     const existing = await Notifications.getPermissionsAsync();
     let status = existing.status;
     if (status !== 'granted') {
@@ -43,31 +80,16 @@ export async function registerForPushTokenAsync(): Promise<PushRegistration | nu
     if (status !== 'granted') {
       return null;
     }
-
-    const projectId =
-      Constants?.expoConfig?.extra?.eas?.projectId ??
-      // @ts-expect-error easConfig is present in EAS builds
-      Constants?.easConfig?.projectId;
-
-    const tokenResponse = await Notifications.getExpoPushTokenAsync(
-      projectId ? { projectId } : undefined
-    );
-    const token = tokenResponse?.data;
-    if (!token) {
-      return null;
-    }
-
-    return { token, platform: Platform.OS === 'ios' ? 'ios' : 'android' };
+    return await fetchToken();
   } catch {
     return null;
   }
 }
 
 /**
- * Hand the push token to the web app (Lovable) so it can associate the token with
- * the signed-in Supabase user and upsert it into the `push_tokens` table. The web
- * app should listen for the `tunedtv:push:token` event and also read the global
- * `window.__tunedtvPushToken` (in case the event fired before its listener attached).
+ * Hand the push token to the web app (Lovable's PushTokenBridge) so it can POST it to the
+ * existing /api/public/hooks/register-push-token endpoint against the signed-in Supabase user.
+ * Sets a global (read on load) and dispatches an event (for an already-attached listener).
  */
 export function buildPushTokenBridgeScript(reg: PushRegistration): string {
   const payload = JSON.stringify(reg);
