@@ -164,14 +164,20 @@ export default function HomeScreen() {
   // Timestamp of when we last went to the background, so we can force a reload on resume
   // after a long background as a backstop in case the terminate handler didn't fire.
   const backgroundedAt = useRef<number | null>(null);
+  // Heartbeat: on resume we ping the web context; if no 'pong' comes back, the WKWebView
+  // content process died silently (no terminate callback) and we reload to avoid a white screen.
+  const heartbeatTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [authInProgress, setAuthInProgress] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
   // Cache-busted on first mount so each cold start fetches a fresh index.html (see
   // buildFreshRootUrl) — this is the core defense against the stale-WebView ChunkLoadError trap.
   const [webUri, setWebUri] = useState(buildFreshRootUrl);
 
-  // Backstop reload after a long background (terminate handler is the primary fix).
-  const STALE_BACKGROUND_MS = 30 * 60 * 1000;
+  // Backstop reload after a long background. Lowered from 30m: iOS can silently jettison the
+  // content process well before then; the resume heartbeat below is the primary detector.
+  const STALE_BACKGROUND_MS = 10 * 60 * 1000;
+  // No response to the resume ping within this window ⇒ assume a dead/blank web view, reload.
+  const HEARTBEAT_TIMEOUT_MS = 2500;
 
   const reloadWebView = useCallback(() => {
     contentProcessGone.current = false;
@@ -181,6 +187,25 @@ export default function HomeScreen() {
     // on resume after a deploy shipped while backgrounded). A new `?v` guarantees a fresh fetch.
     setWebUri(buildFreshRootUrl());
   }, []);
+
+  const checkWebViewAlive = useCallback(() => {
+    // iOS-only: detect a silently-killed WKWebView content process. Inject a ping; if no 'pong'
+    // message arrives shortly, JS isn't running (blank page), so we hard-reload. The pong is
+    // cleared in onMessage. A false positive on a slow device just triggers a cache-busted reload.
+    if (Platform.OS !== 'ios') {
+      return;
+    }
+    if (heartbeatTimeoutRef.current) {
+      clearTimeout(heartbeatTimeoutRef.current);
+    }
+    heartbeatTimeoutRef.current = setTimeout(() => {
+      heartbeatTimeoutRef.current = null;
+      reloadWebView();
+    }, HEARTBEAT_TIMEOUT_MS);
+    webViewRef.current?.injectJavaScript(
+      "(function(){try{window.ReactNativeWebView&&window.ReactNativeWebView.postMessage('tunedtv:pong');}catch(e){}})();true;",
+    );
+  }, [reloadWebView]);
 
   const clearAuthTimeouts = useCallback(() => {
     if (authBridgeTimeoutRef.current) {
@@ -208,16 +233,31 @@ export default function HomeScreen() {
           Date.now() - backgroundedAt.current > STALE_BACKGROUND_MS;
         if (contentProcessGone.current || wasStale) {
           reloadWebView();
+        } else {
+          // No known death and not stale, but iOS may have killed the content process silently
+          // (without onContentProcessDidTerminate). Verify the web context is actually alive.
+          checkWebViewAlive();
         }
         backgroundedAt.current = null;
       } else if (state === 'background' || state === 'inactive') {
+        if (heartbeatTimeoutRef.current) {
+          // Don't let a pending heartbeat fire a reload while we're heading to the background.
+          clearTimeout(heartbeatTimeoutRef.current);
+          heartbeatTimeoutRef.current = null;
+        }
         if (backgroundedAt.current == null) {
           backgroundedAt.current = Date.now();
         }
       }
     });
-    return () => subscription.remove();
-  }, [reloadWebView]);
+    return () => {
+      subscription.remove();
+      if (heartbeatTimeoutRef.current) {
+        clearTimeout(heartbeatTimeoutRef.current);
+        heartbeatTimeoutRef.current = null;
+      }
+    };
+  }, [reloadWebView, checkWebViewAlive]);
 
   const stopWebViewOAuth = useCallback(() => {
     webViewRef.current?.stopLoading();
@@ -376,10 +416,18 @@ export default function HomeScreen() {
         }}
         onLoad={() => setLoadFailed(false)}
         onMessage={(event) => {
+          const raw = event.nativeEvent.data;
+          if (raw === 'tunedtv:pong') {
+            // Heartbeat reply: web context is alive, cancel the pending reload.
+            if (heartbeatTimeoutRef.current) {
+              clearTimeout(heartbeatTimeoutRef.current);
+              heartbeatTimeoutRef.current = null;
+            }
+            return;
+          }
           if (Platform.OS !== 'ios') {
             return;
           }
-          const raw = event.nativeEvent.data;
           const authResult = parseWebAuthResult(raw);
           if (authResult) {
             if (authResult.ok) {
