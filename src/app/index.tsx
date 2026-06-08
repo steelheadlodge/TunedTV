@@ -216,6 +216,20 @@ export default function HomeScreen() {
     );
   }, [reloadWebView]);
 
+  const nudgeWebViewLayout = useCallback(() => {
+    // iOS WKWebView can hand back a stale (too-tall) layout viewport on resume after a long
+    // background, with no 'resize' event — so position:fixed; bottom:0 elements (the bottom nav)
+    // anchor below the visible area and appear to float mid-screen. Dispatching a synthetic
+    // resize forces the page to recompute against the real viewport (and triggers the web-side
+    // visibility/resize listeners). Fired twice to catch the WKWebView settling after resume.
+    if (Platform.OS !== 'ios') {
+      return;
+    }
+    webViewRef.current?.injectJavaScript(
+      "(function(){try{window.dispatchEvent(new Event('resize'));if(window.visualViewport){try{window.visualViewport.dispatchEvent(new Event('resize'));}catch(e){}}}catch(e){}})();true;",
+    );
+  }, []);
+
   const clearAuthTimeouts = useCallback(() => {
     if (authBridgeTimeoutRef.current) {
       clearTimeout(authBridgeTimeoutRef.current);
@@ -277,6 +291,10 @@ export default function HomeScreen() {
           // (without onContentProcessDidTerminate). Verify the web context is actually alive.
           checkWebViewAlive();
         }
+        // Force a relayout shortly after resume to fix a stale WKWebView viewport (floating
+        // bottom nav). Two passes catch the view settling; harmless if a reload is in flight.
+        setTimeout(nudgeWebViewLayout, 300);
+        setTimeout(nudgeWebViewLayout, 900);
         backgroundedAt.current = null;
       } else if (state === 'background' || state === 'inactive') {
         if (heartbeatTimeoutRef.current) {
@@ -296,7 +314,7 @@ export default function HomeScreen() {
         heartbeatTimeoutRef.current = null;
       }
     };
-  }, [reloadWebView, checkWebViewAlive]);
+  }, [reloadWebView, checkWebViewAlive, nudgeWebViewLayout]);
 
   const stopWebViewOAuth = useCallback(() => {
     webViewRef.current?.stopLoading();
