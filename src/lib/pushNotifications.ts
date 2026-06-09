@@ -104,3 +104,74 @@ export function buildPushTokenBridgeScript(reg: PushRegistration): string {
     true;
   `;
 }
+
+/**
+ * Deep-link target carried in a notification's `data` payload (set by the Lovable sender).
+ * `path` is the canonical route the web app should navigate to (e.g. "/worldcup"); the rest
+ * are passed through for context. The native shell is route-agnostic — it just forwards this.
+ */
+export type DeepLinkNav = {
+  path?: string;
+  matchId?: string;
+  league?: string;
+  alertType?: string;
+  [key: string]: unknown;
+};
+
+// A cold-start response from getLastNotificationResponseAsync can be STALE (it returns the last
+// response the user interacted with, even on a normal icon launch). Match reminders are
+// time-bound, so only honor a cold-start deep link delivered within this window; older = ignore,
+// to avoid yanking the user to a finished game when they just tapped the app icon. Warm taps
+// (via the response listener) bypass this — those are unambiguous, fresh interactions.
+const COLD_START_MAX_AGE_MS = 3 * 60 * 60 * 1000;
+
+/**
+ * Pull a deep-link target out of a notification response, or null if there isn't one / it's a
+ * non-tap action / (when checkRecency) it's a stale cold-start response. Date units are
+ * normalized since expo can report seconds or ms depending on platform/version.
+ */
+export function extractDeepLink(
+  response: Notifications.NotificationResponse | null | undefined,
+  opts?: { checkRecency?: boolean }
+): DeepLinkNav | null {
+  if (!response) {
+    return null;
+  }
+  // Only a plain tap on the notification (not a custom action button) should navigate.
+  if (response.actionIdentifier !== Notifications.DEFAULT_ACTION_IDENTIFIER) {
+    return null;
+  }
+  const data = response.notification?.request?.content?.data as DeepLinkNav | undefined;
+  if (!data || (!data.path && !data.matchId)) {
+    return null;
+  }
+  if (opts?.checkRecency) {
+    const delivered = response.notification?.date;
+    if (typeof delivered === 'number') {
+      const deliveredMs = delivered < 1e12 ? delivered * 1000 : delivered;
+      if (Date.now() - deliveredMs > COLD_START_MAX_AGE_MS) {
+        return null;
+      }
+    }
+  }
+  return data;
+}
+
+/**
+ * Tell the web app to navigate to the deep-link target. Sets a global (read on mount for the
+ * cold-start case where the page isn't ready yet) and dispatches an event (for the warm case
+ * where a listener is already attached). The web side (Lovable) routes via the SPA router.
+ */
+export function buildDeepLinkScript(nav: DeepLinkNav): string {
+  const payload = JSON.stringify(nav);
+  return `
+    (function () {
+      try {
+        var nav = ${payload};
+        window.__tunedtvPendingNavigation = nav;
+        window.dispatchEvent(new CustomEvent('tunedtv:navigate', { detail: nav }));
+      } catch (e) {}
+    })();
+    true;
+  `;
+}

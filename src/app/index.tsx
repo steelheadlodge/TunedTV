@@ -13,6 +13,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import * as WebBrowser from 'expo-web-browser';
+import * as Notifications from 'expo-notifications';
 import { configureNativeAuth, signInNatively } from '@/lib/nativeAuth';
 import {
   buildAuthCancelledScript,
@@ -22,9 +23,12 @@ import {
   parseWebAuthResult,
 } from '@/lib/nativeAuthBridge';
 import {
+  buildDeepLinkScript,
   buildPushTokenBridgeScript,
+  extractDeepLink,
   getPushTokenIfGranted,
   requestPushToken,
+  type DeepLinkNav,
   type PushRegistration,
 } from '@/lib/pushNotifications';
 
@@ -176,6 +180,12 @@ export default function HomeScreen() {
   // Expo push token, once the device is registered. Handed to the web app so it can store
   // the token against the signed-in Supabase user for match-reminder pushes.
   const pushRegRef = useRef<PushRegistration | null>(null);
+  // Deep-link target from a tapped notification, held until the web app is ready to receive it
+  // (cold start taps arrive before onLoad). Flushed in onLoad, then cleared.
+  const pendingDeepLinkRef = useRef<DeepLinkNav | null>(null);
+  // Whether the web document has finished loading — gates whether we inject a deep link now or
+  // queue it for the next onLoad. Reset on reload so a tap mid-reload still lands.
+  const webLoadedRef = useRef(false);
   const [authInProgress, setAuthInProgress] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
   // Cache-busted on first mount so each cold start fetches a fresh index.html (see
@@ -190,6 +200,7 @@ export default function HomeScreen() {
 
   const reloadWebView = useCallback(() => {
     contentProcessGone.current = false;
+    webLoadedRef.current = false;
     setLoadFailed(false);
     // Navigate to a freshly cache-busted root rather than webViewRef.reload(): a plain reload
     // re-requests the SAME URL and can be served the stale document again from NSURLCache (e.g.
@@ -274,6 +285,38 @@ export default function HomeScreen() {
   const handlePushEnable = useCallback(() => {
     requestPushToken().then(handlePushRegistration);
   }, [handlePushRegistration]);
+
+  // Send a notification deep-link to the web app if it's loaded; otherwise queue it for onLoad.
+  const routeDeepLink = useCallback((nav: DeepLinkNav | null) => {
+    if (!nav) {
+      return;
+    }
+    if (webLoadedRef.current) {
+      webViewRef.current?.injectJavaScript(buildDeepLinkScript(nav));
+    } else {
+      pendingDeepLinkRef.current = nav;
+    }
+  }, []);
+
+  // Notification deep-linking: tapping a match reminder should open the relevant page, not just
+  // the app. Handle both the cold start (app launched by the tap) and warm taps (app already
+  // running/backgrounded). The cold-start path guards against a stale last-response.
+  useEffect(() => {
+    let cancelled = false;
+    Notifications.getLastNotificationResponseAsync().then((response) => {
+      if (cancelled) {
+        return;
+      }
+      routeDeepLink(extractDeepLink(response, { checkRecency: true }));
+    });
+    const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
+      routeDeepLink(extractDeepLink(response));
+    });
+    return () => {
+      cancelled = true;
+      subscription.remove();
+    };
+  }, [routeDeepLink]);
 
   // Recover from a terminated WebView content process: if iOS killed it while we were
   // backgrounded, reload as soon as the app returns to the foreground so the user never
@@ -473,10 +516,16 @@ export default function HomeScreen() {
         }}
         onLoad={() => {
           setLoadFailed(false);
+          webLoadedRef.current = true;
           // Re-hand the push token after each (re)load so it survives reloads/navigation and
           // the case where the token arrived before the page was ready.
           if (pushRegRef.current) {
             webViewRef.current?.injectJavaScript(buildPushTokenBridgeScript(pushRegRef.current));
+          }
+          // Flush a deep link queued before the page was ready (cold-start notification tap).
+          if (pendingDeepLinkRef.current) {
+            webViewRef.current?.injectJavaScript(buildDeepLinkScript(pendingDeepLinkRef.current));
+            pendingDeepLinkRef.current = null;
           }
         }}
         onMessage={(event) => {
