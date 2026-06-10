@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "585609408161",
+    "project_id": "tunedtv-497302",
+    "storage_bucket": "tunedtv-497302.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585609408161:android:4a7589eb95a22ec9c40ae0",
+        "android_client_info": {
+          "package_name": "com.tunedtv.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585609408161-eqk6rdk1kfd2rn94brlet4jp50eejo13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNWE0mOrvExcb5OpeqNDA8l4cESvJFcr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585609408161-eqk6rdk1kfd2rn94brlet4jp50eejo13.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "585609408161-7clkl3840gq1j05k9pc2jl36mcumsi60.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tunedtv.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
