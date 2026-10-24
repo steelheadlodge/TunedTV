@@ -188,6 +188,11 @@ export default function HomeScreen() {
   const webLoadedRef = useRef(false);
   const [authInProgress, setAuthInProgress] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
+  // Opaque cover shown only during intentional reloadWebView() calls (resume/stale recovery),
+  // NOT on the initial cold-start load — hiding the web skeleton behind a native spinner was
+  // worse UX and masked the real double-reload bug (heartbeat firing before first onLoad).
+  const [webLoading, setWebLoading] = useState(false);
+  const webLoadingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   // Cache-busted on first mount so each cold start fetches a fresh index.html (see
   // buildFreshRootUrl) — this is the core defense against the stale-WebView ChunkLoadError trap.
   const [webUri, setWebUri] = useState(buildFreshRootUrl);
@@ -202,6 +207,7 @@ export default function HomeScreen() {
     contentProcessGone.current = false;
     webLoadedRef.current = false;
     setLoadFailed(false);
+    setWebLoading(true);
     // Navigate to a freshly cache-busted root rather than webViewRef.reload(): a plain reload
     // re-requests the SAME URL and can be served the stale document again from NSURLCache (e.g.
     // on resume after a deploy shipped while backgrounded). A new `?v` guarantees a fresh fetch.
@@ -324,14 +330,16 @@ export default function HomeScreen() {
   useEffect(() => {
     const subscription = AppState.addEventListener('change', (state) => {
       if (state === 'active') {
+        const wasBackgrounded = backgroundedAt.current != null;
         const wasStale =
-          backgroundedAt.current != null &&
+          wasBackgrounded &&
           Date.now() - backgroundedAt.current > STALE_BACKGROUND_MS;
         if (contentProcessGone.current || wasStale) {
           reloadWebView();
-        } else {
-          // No known death and not stale, but iOS may have killed the content process silently
-          // (without onContentProcessDidTerminate). Verify the web context is actually alive.
+        } else if (wasBackgrounded) {
+          // Only ping on resume from background — never on cold start. iOS fires 'active' on
+          // launch too; pinging before the first onLoad always timed out and forced a reload
+          // ~2.5s in (banner flash → black spinner → reload → content).
           checkWebViewAlive();
         }
         // Force a relayout shortly after resume to fix a stale WKWebView viewport (floating
@@ -477,6 +485,20 @@ export default function HomeScreen() {
     return () => subscription.remove();
   }, [completeOAuthInWebView]);
 
+  // Backstop: if onLoad/onError never fire (rare hung load), force the loading cover off after
+  // a few seconds so the app can never be left stuck behind the overlay.
+  useEffect(() => {
+    if (!webLoading) {
+      return;
+    }
+    const id = setTimeout(() => setWebLoading(false), 12000);
+    webLoadingTimeoutRef.current = id;
+    return () => {
+      clearTimeout(id);
+      webLoadingTimeoutRef.current = null;
+    };
+  }, [webLoading]);
+
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <WebView
@@ -512,11 +534,15 @@ export default function HomeScreen() {
           // Ignore subframe errors so an ad/analytics failure doesn't blank the app.
           if (event.nativeEvent.url?.includes('tunedtv.com') ?? true) {
             setLoadFailed(true);
+            // Drop the loading cover so the retry overlay (errorOverlay) is the thing shown.
+            setWebLoading(false);
           }
         }}
         onLoad={() => {
           setLoadFailed(false);
           webLoadedRef.current = true;
+          // Document finished — drop the cover and let the (instant-painted) page show through.
+          setWebLoading(false);
           // Re-hand the push token after each (re)load so it survives reloads/navigation and
           // the case where the token arrived before the page was ready.
           if (pushRegRef.current) {
@@ -607,6 +633,11 @@ export default function HomeScreen() {
           return false;
         }}
       />
+      {webLoading && !loadFailed && (
+        <View style={styles.loadingOverlay} pointerEvents="none">
+          <ActivityIndicator size="large" color="#fff" />
+        </View>
+      )}
       {authInProgress && (
         <View style={styles.authOverlay}>
           <ActivityIndicator size="large" color="#fff" />
@@ -633,6 +664,18 @@ const styles = StyleSheet.create({
   },
   webview: {
     flex: 1,
+    // Dark background matching the web app's theme bg (#1d2025). Without this the
+    // WKWebView paints its default WHITE while tunedtv.com is still loading on a
+    // cold start, producing a jarring white flash between the black splash and
+    // the dark content. Setting it dark makes the load read as black → dark →
+    // content with no flash.
+    backgroundColor: '#1d2025',
+  },
+  loadingOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#000',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   authOverlay: {
     ...StyleSheet.absoluteFillObject,
