@@ -1,4 +1,4 @@
-import { Share } from 'react-native';
+import { Linking, Platform, Share } from 'react-native';
 import * as StoreReview from 'expo-store-review';
 
 /**
@@ -6,7 +6,7 @@ import * as StoreReview from 'expo-store-review';
  * sees it listed in `window.__tunedtvNativeCaps`, so older shells (which never inject this) keep
  * their existing web fallbacks.
  */
-export const NATIVE_CAPS = ['share', 'review'] as const;
+export const NATIVE_CAPS = ['share', 'review', 'openApp'] as const;
 
 export const NATIVE_CAPS_SCRIPT = `
   (function () {
@@ -60,6 +60,54 @@ async function requestReview(): Promise<void> {
   }
 }
 
+type OpenAppMessage = {
+  type: 'tunedtv:openApp';
+  iosSchemes?: unknown;
+  appStoreId?: unknown;
+  androidPackage?: unknown;
+  url?: unknown;
+};
+
+const SCHEME_RE = /^[a-z][a-z0-9+.-]{1,30}:\/\/$/i;
+const PACKAGE_RE = /^[A-Za-z][A-Za-z0-9_]*(\.[A-Za-z0-9_]+)+$/;
+
+async function tryOpen(url: string): Promise<boolean> {
+  try {
+    await Linking.openURL(url);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Opens another app for the web's "Open Fios TV" / "Watch in ESPN app" buttons. A web address is
+ * used as-is (the web only sends ones the app claims, so iOS/Android open the app). Otherwise:
+ * iOS tries each custom scheme (not published by the apps, so several candidates) and falls back
+ * to the App Store page, which shows "Open" when installed; Android goes through the Play Store's
+ * launch handler, which opens an installed app by package name or shows its store page.
+ */
+async function openApp(msg: OpenAppMessage): Promise<void> {
+  if (typeof msg.url === 'string' && msg.url.startsWith('https://')) {
+    await tryOpen(msg.url);
+    return;
+  }
+  if (Platform.OS === 'ios') {
+    const schemes = Array.isArray(msg.iosSchemes) ? msg.iosSchemes.slice(0, 4) : [];
+    for (const s of schemes) {
+      if (typeof s === 'string' && SCHEME_RE.test(s) && (await tryOpen(s))) return;
+    }
+    if (typeof msg.appStoreId === 'string' && /^\d{5,12}$/.test(msg.appStoreId)) {
+      await tryOpen(`itms-apps://apps.apple.com/app/id${msg.appStoreId}`);
+    }
+    return;
+  }
+  const pkg = typeof msg.androidPackage === 'string' && PACKAGE_RE.test(msg.androidPackage) ? msg.androidPackage : null;
+  if (!pkg) return;
+  if (await tryOpen(`market://launch?id=${pkg}`)) return;
+  await tryOpen(`https://play.google.com/store/apps/details?id=${pkg}`);
+}
+
 /** Handles a parsed web message if it's one of ours. Returns true when consumed. */
 export function handleNativeExtrasMessage(message: unknown): boolean {
   if (!message || typeof message !== 'object') return false;
@@ -70,6 +118,10 @@ export function handleNativeExtrasMessage(message: unknown): boolean {
   }
   if (m.type === 'tunedtv:review:request') {
     void requestReview();
+    return true;
+  }
+  if (m.type === 'tunedtv:openApp') {
+    void openApp(message as OpenAppMessage);
     return true;
   }
   return false;
