@@ -31,6 +31,7 @@ import {
   type DeepLinkNav,
   type PushRegistration,
 } from '@/lib/pushNotifications';
+import { handleNativeExtrasMessage, NATIVE_CAPS_SCRIPT } from '@/lib/nativeExtras';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -333,7 +334,7 @@ export default function HomeScreen() {
         const wasBackgrounded = backgroundedAt.current != null;
         const wasStale =
           wasBackgrounded &&
-          Date.now() - backgroundedAt.current > STALE_BACKGROUND_MS;
+          Date.now() - (backgroundedAt.current ?? 0) > STALE_BACKGROUND_MS;
         if (contentProcessGone.current || wasStale) {
           reloadWebView();
         } else if (wasBackgrounded) {
@@ -543,6 +544,7 @@ export default function HomeScreen() {
           webLoadedRef.current = true;
           // Document finished — drop the cover and let the (instant-painted) page show through.
           setWebLoading(false);
+          webViewRef.current?.injectJavaScript(NATIVE_CAPS_SCRIPT);
           // Re-hand the push token after each (re)load so it survives reloads/navigation and
           // the case where the token arrived before the page was ready.
           if (pushRegRef.current) {
@@ -570,6 +572,9 @@ export default function HomeScreen() {
             const message = JSON.parse(raw);
             if (message && message.type === 'tunedtv:push:enable') {
               handlePushEnable();
+              return;
+            }
+            if (handleNativeExtrasMessage(message)) {
               return;
             }
           } catch {
