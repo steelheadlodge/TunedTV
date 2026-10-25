@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   Alert,
   AppState,
+  BackHandler,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -187,6 +188,9 @@ export default function HomeScreen() {
   // Whether the web document has finished loading — gates whether we inject a deep link now or
   // queue it for the next onLoad. Reset on reload so a tap mid-reload still lands.
   const webLoadedRef = useRef(false);
+  // Mirrors the WebView's history so Android's back gesture/button steps back a page instead of
+  // closing the app; only exits once there's nothing left to go back to.
+  const canGoBackRef = useRef(false);
   const [authInProgress, setAuthInProgress] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
   // Opaque cover shown only during intentional reloadWebView() calls (resume/stale recovery),
@@ -486,6 +490,20 @@ export default function HomeScreen() {
     return () => subscription.remove();
   }, [completeOAuthInWebView]);
 
+  useEffect(() => {
+    if (Platform.OS !== 'android') {
+      return;
+    }
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (!canGoBackRef.current) {
+        return false;
+      }
+      webViewRef.current?.goBack();
+      return true;
+    });
+    return () => sub.remove();
+  }, []);
+
   // Backstop: if onLoad/onError never fire (rare hung load), force the loading cover off after
   // a few seconds so the app can never be left stuck behind the overlay.
   useEffect(() => {
@@ -510,6 +528,7 @@ export default function HomeScreen() {
         sharedCookiesEnabled
         thirdPartyCookiesEnabled
         setSupportMultipleWindows={false}
+        allowsBackForwardNavigationGestures
         bounces={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
@@ -600,6 +619,7 @@ export default function HomeScreen() {
         }}
         onNavigationStateChange={(navState) => {
           const { url } = navState;
+          canGoBackRef.current = navState.canGoBack;
           if (
             nativeAuthInProgress.current &&
             url.includes('tunedtv.com') &&
