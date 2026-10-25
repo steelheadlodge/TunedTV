@@ -2,7 +2,7 @@
   "expo": {
     "name": "TunedTV",
     "slug": "TunedTV",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "tunedtv",
@@ -13,13 +13,19 @@
       "supportsTablet": true,
       "usesAppleSignIn": true,
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocalNetworkUsageDescription": "TunedTV finds your DIRECTV receiver or Roku on your Wi-Fi so it can change the channel or open an app on your TV.",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
       }
     },
     "android": {
       "package": "com.tunedtv.app",
       "googleServicesFile": "./google-services.json",
-      "permissions": ["POST_NOTIFICATIONS"],
+      "permissions": [
+        "POST_NOTIFICATIONS"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#1d2025"
@@ -40,7 +46,8 @@
         }
       ],
       "./plugins/withGoogleSignInNonce.js",
-      "./plugins/withModularHeaders.js"
+      "./plugins/withModularHeaders.js",
+      "./plugins/withLocalNetworkHttp.js"
     ],
     "extra": {
       "eas": {

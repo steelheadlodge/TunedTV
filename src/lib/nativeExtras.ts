@@ -1,12 +1,13 @@
 import { Linking, Platform, Share } from 'react-native';
 import * as StoreReview from 'expo-store-review';
+import { handleTvRequest, type TvRequest, type TvResult } from '@/lib/tvControl';
 
 /**
  * Native features the web app can ask for over postMessage. The web only uses a feature once it
  * sees it listed in `window.__tunedtvNativeCaps`, so older shells (which never inject this) keep
  * their existing web fallbacks.
  */
-export const NATIVE_CAPS = ['share', 'review', 'openApp'] as const;
+export const NATIVE_CAPS = ['share', 'review', 'openApp', 'tv'] as const;
 
 export const NATIVE_CAPS_SCRIPT = `
   (function () {
@@ -108,10 +109,28 @@ async function openApp(msg: OpenAppMessage): Promise<void> {
   await tryOpen(`https://play.google.com/store/apps/details?id=${pkg}`);
 }
 
-/** Handles a parsed web message if it's one of ours. Returns true when consumed. */
-export function handleNativeExtrasMessage(message: unknown): boolean {
+/** Answers a web request by firing `tunedtv:tv-reply` with the request's id. */
+function tvReplyScript(id: string, result: TvResult): string {
+  const detail = JSON.stringify({ id, ...result });
+  return `(function(){try{window.dispatchEvent(new CustomEvent('tunedtv:tv-reply',{detail:${detail}}));}catch(e){}})();true;`;
+}
+
+/**
+ * Handles a parsed web message if it's one of ours. Returns true when consumed. `inject` runs a
+ * script in the page, for messages that answer back.
+ */
+export function handleNativeExtrasMessage(message: unknown, inject?: (script: string) => void): boolean {
   if (!message || typeof message !== 'object') return false;
-  const m = message as { type?: unknown; url?: unknown };
+  const m = message as { type?: unknown; url?: unknown; id?: unknown };
+  if (m.type === 'tunedtv:tv') {
+    const id = typeof m.id === 'string' && /^[\w-]{1,40}$/.test(m.id) ? m.id : null;
+    if (id && inject) {
+      void handleTvRequest(message as TvRequest)
+        .catch((): TvResult => ({ ok: false, error: 'unreachable' }))
+        .then((result) => inject(tvReplyScript(id, result)));
+    }
+    return true;
+  }
   if (m.type === 'tunedtv:share') {
     if (isTunedTvUrl(m.url)) void nativeShare(message as ShareMessage);
     return true;

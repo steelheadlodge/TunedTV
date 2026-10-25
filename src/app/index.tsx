@@ -593,7 +593,7 @@ export default function HomeScreen() {
               handlePushEnable();
               return;
             }
-            if (handleNativeExtrasMessage(message)) {
+            if (handleNativeExtrasMessage(message, (js) => webViewRef.current?.injectJavaScript(js))) {
               return;
             }
           } catch {
