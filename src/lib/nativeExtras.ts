@@ -1,5 +1,6 @@
 import { Linking, Platform, Share } from 'react-native';
 import * as StoreReview from 'expo-store-review';
+import { netAvailable } from '@/lib/netBridge';
 import { handleTvRequest, type TvRequest, type TvResult } from '@/lib/tvControl';
 
 /**
@@ -7,7 +8,7 @@ import { handleTvRequest, type TvRequest, type TvResult } from '@/lib/tvControl'
  * sees it listed in `window.__tunedtvNativeCaps`, so older shells (which never inject this) keep
  * their existing web fallbacks.
  */
-export const NATIVE_CAPS = ['share', 'review', 'openApp', 'tv'] as const;
+export const NATIVE_CAPS = ['share', 'review', 'openApp', 'tv', ...(netAvailable() ? ['net'] : [])];
 
 export const NATIVE_CAPS_SCRIPT = `
   (function () {

@@ -33,10 +33,13 @@ import {
   type PushRegistration,
 } from '@/lib/pushNotifications';
 import { handleNativeExtrasMessage, NATIVE_CAPS_SCRIPT } from '@/lib/nativeExtras';
+import { handleNetMessage, resetNet } from '@/lib/netBridge';
 
 WebBrowser.maybeCompleteAuthSession();
 
-const APP_WEB_ORIGIN = 'https://tunedtv.com';
+// Dev builds can load a local copy of the web app (EXPO_PUBLIC_WEB_ORIGIN=http://localhost:5199).
+const DEV_WEB_ORIGIN = __DEV__ ? process.env.EXPO_PUBLIC_WEB_ORIGIN : undefined;
+const APP_WEB_ORIGIN = DEV_WEB_ORIGIN || 'https://tunedtv.com';
 const APP_OAUTH_REDIRECT = 'tunedtv://auth/callback';
 const SUPABASE_REDIRECT = 'https://tunedtv.com/~oauth/callback';
 /** Max wait for web bridge after native Apple/Google returns a token. */
@@ -51,6 +54,8 @@ const AUTH_FLOW_TIMEOUT_MS = 120_000;
 // and localStorage are keyed by origin (not URL) so sign-in and prefs are untouched. Only the
 // root document is cache-busted — never auth/OAuth callback URLs.
 function buildFreshRootUrl() {
+  const devPath = DEV_WEB_ORIGIN ? process.env.EXPO_PUBLIC_WEB_START_PATH : undefined;
+  if (devPath) return `${APP_WEB_ORIGIN}${devPath}${devPath.includes('?') ? '&' : '?'}v=${Date.now()}`;
   return `${APP_WEB_ORIGIN}/?v=${Date.now()}`;
 }
 
@@ -79,6 +84,7 @@ function isOAuthCallback(url: string) {
 }
 
 function isAllowedInWebView(url: string) {
+  if (DEV_WEB_ORIGIN && url.startsWith(DEV_WEB_ORIGIN)) return true;
   return url.includes('tunedtv.com') && !isOAuthCallback(url);
 }
 
@@ -558,6 +564,7 @@ export default function HomeScreen() {
             setWebLoading(false);
           }
         }}
+        onLoadStart={() => resetNet()}
         onLoad={() => {
           setLoadFailed(false);
           webLoadedRef.current = true;
@@ -593,7 +600,11 @@ export default function HomeScreen() {
               handlePushEnable();
               return;
             }
-            if (handleNativeExtrasMessage(message, (js) => webViewRef.current?.injectJavaScript(js))) {
+            const inject = (js: string) => webViewRef.current?.injectJavaScript(js);
+            if (handleNetMessage(message, event.nativeEvent.url, inject, DEV_WEB_ORIGIN)) {
+              return;
+            }
+            if (handleNativeExtrasMessage(message, inject)) {
               return;
             }
           } catch {

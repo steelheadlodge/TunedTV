@@ -2,7 +2,7 @@
   "expo": {
     "name": "TunedTV",
     "slug": "TunedTV",
-    "version": "1.0.14",
+    "version": "1.0.15",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "tunedtv",
@@ -14,10 +14,24 @@
       "usesAppleSignIn": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSLocalNetworkUsageDescription": "TunedTV finds your DIRECTV receiver or Roku on your Wi-Fi so it can change the channel or open an app on your TV.",
+        "NSLocalNetworkUsageDescription": "TunedTV finds the TVs and TV boxes on your Wi-Fi (Samsung, LG, Roku, Google TV, Fire TV, Vizio, DIRECTV, TiVo, Apple TV) so it can change the channel, open an app, or work as a remote.",
         "NSAppTransportSecurity": {
           "NSAllowsLocalNetworking": true
-        }
+        },
+        "NSBonjourServices": [
+          "_googlecast._tcp",
+          "_androidtvremote2._tcp",
+          "_companion-link._tcp",
+          "_airplay._tcp",
+          "_raop._tcp",
+          "_tivo-remote._tcp",
+          "_tivo-device._tcp",
+          "_samsungmsf._tcp",
+          "_viziocast._tcp",
+          "_amzn-wplay._tcp",
+          "_roku-rcp._tcp",
+          "_http._tcp"
+        ]
       }
     },
     "android": {

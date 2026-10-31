@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["TvNetModule"]
+  },
+  "android": {
+    "modules": ["com.tunedtv.tvnet.TvNetModule"]
+  }
+}
