@@ -178,6 +178,8 @@ async function run(m: Msg): Promise<unknown> {
         data: m.data,
         timeoutMs: clampMs(m.timeoutMs, 1500, 8000),
         maxReplies: typeof m.maxReplies === 'number' ? Math.min(32, m.maxReplies) : 8,
+        // Wake-on-LAN goes to the /24 broadcast; Android refuses it without SO_BROADCAST.
+        broadcast: /\.255$/.test(m.host),
       });
     }
     case 'mdns': {

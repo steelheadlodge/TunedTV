@@ -19,7 +19,7 @@ type TvNetNative = {
     open: { host: string; port: number }[];
     denied: boolean;
   }>;
-  udp(opts: { host: string; port: number; data: string; timeoutMs?: number; maxReplies?: number }): Promise<{
+  udp(opts: { host: string; port: number; data: string; timeoutMs?: number; maxReplies?: number; broadcast?: boolean }): Promise<{
     replies: string[];
     error?: string | null;
   }>;
