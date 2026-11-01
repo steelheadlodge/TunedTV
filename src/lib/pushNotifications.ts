@@ -106,6 +106,16 @@ export function buildPushTokenBridgeScript(reg: PushRegistration): string {
 }
 
 /**
+ * "Ask TunedTV" links from Siri, the Android launcher shortcut, ChatGPT/Claude and texts:
+ * tunedtv://assistant?q=… or https://tunedtv.com/assistant?q=… → "/assistant?q=…". Anything else
+ * (including the OAuth callback) returns null.
+ */
+export function assistantPathFromUrl(url: string): string | null {
+  const m = /^(?:tunedtv:\/\/|https:\/\/(?:www\.)?tunedtv\.com\/)assistant\/?(\?[^#]*)?(?:#.*)?$/i.exec(url);
+  return m ? `/assistant${m[1] ?? ''}` : null;
+}
+
+/**
  * Deep-link target carried in a notification's `data` payload (set by the Lovable sender).
  * `path` is the canonical route the web app should navigate to (e.g. "/worldcup"); the rest
  * are passed through for context. The native shell is route-agnostic — it just forwards this.

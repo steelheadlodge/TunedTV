@@ -24,6 +24,7 @@ import {
   parseWebAuthResult,
 } from '@/lib/nativeAuthBridge';
 import {
+  assistantPathFromUrl,
   buildDeepLinkScript,
   buildPushTokenBridgeScript,
   extractDeepLink,
@@ -491,10 +492,25 @@ export default function HomeScreen() {
     const subscription = Linking.addEventListener('url', ({ url }) => {
       if (url.startsWith(APP_OAUTH_REDIRECT)) {
         completeOAuthInWebView(url);
+        return;
+      }
+      const path = assistantPathFromUrl(url);
+      if (path) {
+        routeDeepLink({ path });
       }
     });
     return () => subscription.remove();
-  }, [completeOAuthInWebView]);
+  }, [completeOAuthInWebView, routeDeepLink]);
+
+  // Cold start from Siri / a shortcut / a link: the URL that launched the app.
+  useEffect(() => {
+    Linking.getInitialURL().then((url) => {
+      const path = url ? assistantPathFromUrl(url) : null;
+      if (path) {
+        routeDeepLink({ path });
+      }
+    });
+  }, [routeDeepLink]);
 
   useEffect(() => {
     if (Platform.OS !== 'android') {
