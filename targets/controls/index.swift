@@ -6,5 +6,6 @@ struct TunedTVControlsBundle: WidgetBundle {
   var body: some Widget {
     AskTunedTVControl()
     TvRemoteControl()
+    NextGameWidget()
   }
 }
