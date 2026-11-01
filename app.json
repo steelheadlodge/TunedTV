@@ -67,7 +67,14 @@
       "./plugins/withModularHeaders.js",
       "./plugins/withLocalNetworkHttp.js",
       "./plugins/withAskTunedTV.js",
-      "@bacons/apple-targets"
+      "@bacons/apple-targets",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "TunedTV listens when you tap the mic so you can say what to watch, like \"put on the Knicks game\".",
+          "speechRecognitionPermission": "TunedTV turns what you say into a request, like \"put on the Knicks game\", to find it and put it on your TV."
+        }
+      ]
     ],
     "extra": {
       "eas": {

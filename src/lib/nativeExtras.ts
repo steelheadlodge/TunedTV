@@ -1,14 +1,30 @@
 import { Linking, Platform, Share } from 'react-native';
 import * as StoreReview from 'expo-store-review';
+import { ExpoSpeechRecognitionModule } from 'expo-speech-recognition';
 import { netAvailable } from '@/lib/netBridge';
 import { handleTvRequest, type TvRequest, type TvResult } from '@/lib/tvControl';
+
+function speechAvailable(): boolean {
+  try {
+    return ExpoSpeechRecognitionModule.isRecognitionAvailable();
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Native features the web app can ask for over postMessage. The web only uses a feature once it
  * sees it listed in `window.__tunedtvNativeCaps`, so older shells (which never inject this) keep
  * their existing web fallbacks.
  */
-export const NATIVE_CAPS = ['share', 'review', 'openApp', 'tv', ...(netAvailable() ? ['net'] : [])];
+export const NATIVE_CAPS = [
+  'share',
+  'review',
+  'openApp',
+  'tv',
+  ...(netAvailable() ? ['net'] : []),
+  ...(speechAvailable() ? ['speech'] : []),
+];
 
 export const NATIVE_CAPS_SCRIPT = `
   (function () {
@@ -116,6 +132,52 @@ function tvReplyScript(id: string, result: TvResult): string {
   return `(function(){try{window.dispatchEvent(new CustomEvent('tunedtv:tv-reply',{detail:${detail}}));}catch(e){}})();true;`;
 }
 
+// "Ask TunedTV" mic: on-device speech recognition, streamed to the page as `tunedtv:speech`
+// events ({kind: 'partial' | 'final', text} or {kind: 'error', error}). One session at a time.
+let speechSubs: { remove(): void }[] = [];
+
+function dropSpeechListeners(): void {
+  for (const s of speechSubs) s.remove();
+  speechSubs = [];
+}
+
+function speechScript(detail: Record<string, string>): string {
+  return `(function(){try{window.dispatchEvent(new CustomEvent('tunedtv:speech',{detail:${JSON.stringify(detail)}}));}catch(e){}})();true;`;
+}
+
+async function startSpeech(inject: (script: string) => void): Promise<void> {
+  dropSpeechListeners();
+  ExpoSpeechRecognitionModule.abort();
+  const perm = await ExpoSpeechRecognitionModule.requestPermissionsAsync();
+  if (!perm.granted) {
+    inject(speechScript({ kind: 'error', error: 'not-allowed' }));
+    return;
+  }
+  let last = '';
+  let done = false;
+  const finish = (detail: Record<string, string>) => {
+    if (done) return;
+    done = true;
+    inject(speechScript(detail));
+    dropSpeechListeners();
+  };
+  speechSubs = [
+    ExpoSpeechRecognitionModule.addListener('result', (e) => {
+      last = e.results[0]?.transcript ?? last;
+      if (e.isFinal) finish({ kind: 'final', text: last });
+      else inject(speechScript({ kind: 'partial', text: last }));
+    }),
+    ExpoSpeechRecognitionModule.addListener('error', (e) => finish({ kind: 'error', error: e.error })),
+    ExpoSpeechRecognitionModule.addListener('end', () => finish({ kind: 'final', text: last })),
+  ];
+  ExpoSpeechRecognitionModule.start({
+    lang: 'en-US',
+    interimResults: true,
+    continuous: false,
+    contextualStrings: ['TunedTV', 'ESPN', 'SNY', 'YES Network', 'Fios', 'Netflix', 'Peacock', 'Paramount Plus'],
+  });
+}
+
 /**
  * Handles a parsed web message if it's one of ours. Returns true when consumed. `inject` runs a
  * script in the page, for messages that answer back.
@@ -142,6 +204,14 @@ export function handleNativeExtrasMessage(message: unknown, inject?: (script: st
   }
   if (m.type === 'tunedtv:openApp') {
     void openApp(message as OpenAppMessage);
+    return true;
+  }
+  if (m.type === 'tunedtv:speech:start') {
+    if (inject) void startSpeech(inject).catch(() => inject(speechScript({ kind: 'error', error: 'unavailable' })));
+    return true;
+  }
+  if (m.type === 'tunedtv:speech:stop') {
+    ExpoSpeechRecognitionModule.stop();
     return true;
   }
   return false;
