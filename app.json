@@ -35,7 +35,8 @@
       },
       "associatedDomains": [
         "applinks:tunedtv.com"
-      ]
+      ],
+      "appleTeamId": "H8R3K9P5AC"
     },
     "android": {
       "package": "com.tunedtv.app",
@@ -65,7 +66,8 @@
       "./plugins/withGoogleSignInNonce.js",
       "./plugins/withModularHeaders.js",
       "./plugins/withLocalNetworkHttp.js",
-      "./plugins/withAskTunedTV.js"
+      "./plugins/withAskTunedTV.js",
+      "@bacons/apple-targets"
     ],
     "extra": {
       "eas": {

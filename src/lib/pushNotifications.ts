@@ -106,11 +106,12 @@ export function buildPushTokenBridgeScript(reg: PushRegistration): string {
 }
 
 /**
- * "Ask TunedTV" links from Siri, the Android launcher shortcut, ChatGPT/Claude and texts:
- * tunedtv://assistant?q=… or https://tunedtv.com/assistant?q=… → "/assistant?q=…". Anything else
- * (including the OAuth callback) returns null.
+ * Links from Siri, Control Center, the Android launcher shortcut, ChatGPT/Claude and texts:
+ * tunedtv://assistant?q=… or https://tunedtv.com/assistant?q=… → "/assistant?q=…", and
+ * tunedtv://remote → "/profile?remote=1". Anything else (including the OAuth callback) is null.
  */
 export function assistantPathFromUrl(url: string): string | null {
+  if (/^tunedtv:\/\/remote\/?(?:[?#].*)?$/i.test(url)) return '/profile?remote=1';
   const m = /^(?:tunedtv:\/\/|https:\/\/(?:www\.)?tunedtv\.com\/)assistant\/?(\?[^#]*)?(?:#.*)?$/i.exec(url);
   return m ? `/assistant${m[1] ?? ''}` : null;
 }
