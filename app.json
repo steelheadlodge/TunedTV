@@ -31,6 +31,16 @@
           "_amzn-wplay._tcp",
           "_roku-rcp._tcp",
           "_http._tcp"
+        ],
+        "INAlternativeAppNames": [
+          {
+            "INAlternativeAppName": "Tuner",
+            "INAlternativeAppNamePronunciationHint": "too ner"
+          },
+          {
+            "INAlternativeAppName": "Tuned",
+            "INAlternativeAppNamePronunciationHint": "toond"
+          }
         ]
       },
       "associatedDomains": [
