@@ -14,6 +14,7 @@
       "usesAppleSignIn": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryUsageDescription": "TunedTV does not read your photos. iOS shows this only if you choose a photo to upload in the app.",
         "NSLocalNetworkUsageDescription": "TunedTV finds the TVs and TV boxes on your Wi-Fi (Samsung, LG, Roku, Google TV, Fire TV, Vizio, DIRECTV, TiVo, Apple TV) so it can change the channel, open an app, or work as a remote.",
         "NSAppTransportSecurity": {
           "NSAllowsLocalNetworking": true
