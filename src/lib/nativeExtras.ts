@@ -1,4 +1,5 @@
 import { Linking, Platform, Share } from 'react-native';
+import * as Haptics from 'expo-haptics';
 import * as StoreReview from 'expo-store-review';
 import { ExpoSpeechRecognitionModule } from 'expo-speech-recognition';
 import { netAvailable } from '@/lib/netBridge';
@@ -22,6 +23,7 @@ export const NATIVE_CAPS = [
   'review',
   'openApp',
   'tv',
+  'haptic',
   ...(netAvailable() ? ['net'] : []),
   ...(speechAvailable() ? ['speech'] : []),
 ];
@@ -208,6 +210,11 @@ export function handleNativeExtrasMessage(message: unknown, inject?: (script: st
   }
   if (m.type === 'tunedtv:speech:start') {
     if (inject) void startSpeech(inject).catch(() => inject(speechScript({ kind: 'error', error: 'unavailable' })));
+    return true;
+  }
+  if (m.type === 'tunedtv:haptic') {
+    // Remote keys fire this on every press (and on repeat while held), so it stays the lightest tap.
+    void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
     return true;
   }
   if (m.type === 'tunedtv:speech:stop') {
