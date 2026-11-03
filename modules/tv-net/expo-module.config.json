@@ -1,9 +1,17 @@
 {
-  "platforms": ["apple", "android"],
+  "platforms": [
+    "apple",
+    "android"
+  ],
   "apple": {
-    "modules": ["TvNetModule"]
+    "modules": [
+      "TvNetModule",
+      "TvScreenModule"
+    ]
   },
   "android": {
-    "modules": ["com.tunedtv.tvnet.TvNetModule"]
+    "modules": [
+      "com.tunedtv.tvnet.TvNetModule"
+    ]
   }
 }

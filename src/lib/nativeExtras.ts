@@ -3,6 +3,7 @@ import * as Haptics from 'expo-haptics';
 import * as StoreReview from 'expo-store-review';
 import { ExpoSpeechRecognitionModule } from 'expo-speech-recognition';
 import { netAvailable } from '@/lib/netBridge';
+import { TvScreen, type TvScreenState } from '../../modules/tv-net';
 import { handleTvRequest, type TvRequest, type TvResult } from '@/lib/tvControl';
 
 function speechAvailable(): boolean {
@@ -25,6 +26,7 @@ export const NATIVE_CAPS = [
   'tv',
   'haptic',
   ...(netAvailable() ? ['net'] : []),
+  ...(Platform.OS === 'ios' && TvScreen ? ['airplay'] : []),
   ...(speechAvailable() ? ['speech'] : []),
 ];
 
@@ -184,9 +186,38 @@ async function startSpeech(inject: (script: string) => void): Promise<void> {
  * Handles a parsed web message if it's one of ours. Returns true when consumed. `inject` runs a
  * script in the page, for messages that answer back.
  */
+// AirPlay second screen: the page asks for its TV screen page on the mirrored TV and hears back
+// `tunedtv:screen-state` ({connected, showing}) on every change.
+let screenInject: ((script: string) => void) | undefined;
+let screenSub: { remove(): void } | null = null;
+const screenStateScript = (st: TvScreenState) =>
+  `(function(){try{window.dispatchEvent(new CustomEvent('tunedtv:screen-state',{detail:${JSON.stringify(st)}}));}catch(e){}})();true;`;
+
+function isTvScreenUrl(url: unknown): url is string {
+  if (!isTunedTvUrl(url)) return false;
+  return new URL(url).pathname === '/tv-screen';
+}
+
+async function screenMessage(m: { op?: unknown; url?: unknown }, inject?: (script: string) => void): Promise<void> {
+  if (!TvScreen) return;
+  screenInject = inject ?? screenInject;
+  screenSub ??= TvScreen.addListener('onScreenChange', (st) => screenInject?.(screenStateScript(st)));
+  const st =
+    m.op === 'show' && isTvScreenUrl(m.url)
+      ? await TvScreen.show(m.url)
+      : m.op === 'hide'
+        ? await TvScreen.hide()
+        : await TvScreen.status();
+  screenInject?.(screenStateScript(st));
+}
+
 export function handleNativeExtrasMessage(message: unknown, inject?: (script: string) => void): boolean {
   if (!message || typeof message !== 'object') return false;
   const m = message as { type?: unknown; url?: unknown; id?: unknown };
+  if (m.type === 'tunedtv:screen') {
+    void screenMessage(message as { op?: unknown; url?: unknown }, inject).catch(() => {});
+    return true;
+  }
   if (m.type === 'tunedtv:tv') {
     const id = typeof m.id === 'string' && /^[\w-]{1,40}$/.test(m.id) ? m.id : null;
     if (id && inject) {

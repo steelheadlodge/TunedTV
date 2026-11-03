@@ -33,3 +33,14 @@ type TvNetNative = {
 
 /** Null in builds without the module (Expo Go, web). */
 export const TvNet = requireOptionalNativeModule<TvNetNative>('TvNet');
+
+export type TvScreenState = { connected: boolean; showing: boolean };
+type TvScreenNative = {
+  status(): Promise<TvScreenState>;
+  show(url: string): Promise<TvScreenState>;
+  hide(): Promise<TvScreenState>;
+  addListener(event: 'onScreenChange', cb: (e: TvScreenState) => void): EventSubscription;
+};
+
+/** AirPlay second screen (iOS). Null in builds without it. */
+export const TvScreen = requireOptionalNativeModule<TvScreenNative>('TvScreen');
