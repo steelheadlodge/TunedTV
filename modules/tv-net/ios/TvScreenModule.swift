@@ -55,7 +55,7 @@ public final class TvScreenModule: Module {
   private func externalScene() -> UIWindowScene? {
     UIApplication.shared.connectedScenes
       .compactMap { $0 as? UIWindowScene }
-      .first { $0.session.role == .windowExternalDisplayNonInteractive || $0.screen !== UIScreen.main }
+      .first { $0.screen !== UIScreen.main }
   }
 
   private func state() -> [String: Bool] {
