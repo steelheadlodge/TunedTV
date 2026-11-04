@@ -46,7 +46,16 @@ public final class TvScreenModule: Module {
   }
 
   private func external() -> UIScreen? {
-    UIScreen.screens.first { $0 !== UIScreen.main }
+    if let scene = externalScene() { return scene.screen }
+    return UIScreen.screens.first { $0 !== UIScreen.main }
+  }
+
+  /// Apps on the UIScene lifecycle get the TV as its own window scene; a window bound with
+  /// `UIWindow.screen` there never draws, so use the scene whenever one exists.
+  private func externalScene() -> UIWindowScene? {
+    UIApplication.shared.connectedScenes
+      .compactMap { $0 as? UIWindowScene }
+      .first { $0.session.role == .windowExternalDisplayNonInteractive || $0.screen !== UIScreen.main }
   }
 
   private func state() -> [String: Bool] {
@@ -67,11 +76,23 @@ public final class TvScreenModule: Module {
       self?.teardown()
       self?.emit()
     })
+    observers.append(nc.addObserver(forName: UIScene.willConnectNotification, object: nil, queue: .main) { [weak self] _ in
+      DispatchQueue.main.async {
+        self?.attach()
+        self?.emit()
+      }
+    })
+    observers.append(nc.addObserver(forName: UIScene.didDisconnectNotification, object: nil, queue: .main) { [weak self] note in
+      guard let self, let scene = note.object as? UIWindowScene, self.window?.windowScene === scene else { return }
+      self.teardown()
+      self.emit()
+    })
   }
 
   private func attach() {
     guard let url, let screen = external() else { return }
-    if let window, window.screen === screen {
+    let scene = externalScene()
+    if let window, window.screen === screen, scene == nil || window.windowScene === scene {
       (window.rootViewController?.view as? WKWebView)?.load(URLRequest(url: url))
       return
     }
@@ -86,8 +107,14 @@ public final class TvScreenModule: Module {
     web.load(URLRequest(url: url))
     let vc = UIViewController()
     vc.view = web
-    let w = UIWindow(frame: screen.bounds)
-    w.screen = screen
+    let w: UIWindow
+    if let scene {
+      w = UIWindow(windowScene: scene)
+      w.frame = scene.coordinateSpace.bounds
+    } else {
+      w = UIWindow(frame: screen.bounds)
+      w.screen = screen
+    }
     w.rootViewController = vc
     w.isHidden = false
     window = w
