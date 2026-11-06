@@ -2,7 +2,7 @@
   "expo": {
     "name": "TunedTV",
     "slug": "TunedTV",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "tunedtv",
@@ -15,7 +15,7 @@
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "NSPhotoLibraryUsageDescription": "TunedTV does not read your photos. iOS shows this only if you choose a photo to upload in the app.",
-        "NSLocalNetworkUsageDescription": "TunedTV finds the TVs and TV boxes on your Wi-Fi (Samsung, LG, Roku, Google TV, Fire TV, Vizio, DIRECTV, TiVo, Apple TV) so it can change the channel, open an app, or work as a remote.",
+        "NSLocalNetworkUsageDescription": "TunedTV finds your TV and cable or TV box on your Wi-Fi so it can change the channel, open an app, or work as your remote.",
         "NSAppTransportSecurity": {
           "NSAllowsLocalNetworking": true
         },
