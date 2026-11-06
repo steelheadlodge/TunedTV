@@ -11,7 +11,7 @@ New in TunedTV:
 • Control Center and Lock Screen buttons for Ask TunedTV and TV Remote, plus a Next Game widget.
 • Talk to TunedTV with the mic, and feel each tap on the remote.
 • Simpler setup: pick sports, movies or both, and TunedTV sets itself up around you.
-• Faster TV finding on your Wi-Fi, plus fixes.
+• Fixes and improvements.
 
 ## Promotional text (optional, 170)
 
