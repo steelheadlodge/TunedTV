@@ -47,16 +47,11 @@ iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 1. `iphone-6.5-1-sports.png` Tonight's game, your channel, and one tap puts it on
 2. `iphone-6.5-2-ask.png` Just say what you want on, and your TV changes
 3. `iphone-6.5-3-remote.png` The remote on your phone, your channels, one tap
-4. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
+4. `iphone-6.5-6-ontv.png` Play it on your TV, or open it on your phone
 5. `iphone-6.5-5-movies.png` What to watch tonight, picked for you
-6. `iphone-6.5-6-ontv.png` Play it on your TV, or open it on your phone
-   The button reads "Play on Living Room TV" (edited; the app still shows the TV's model number).
+6. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
 
 iPad 13" (2064x2752): `ipad-13-1-sports.png` (the game and the real remote, side by side)
-
-Left out on purpose: the movies and title screens. Their posters and backdrop stills are
-studio-owned artwork, and TMDB's terms say they don't own those images and don't license them for
-commercial use. The app shows them to users; the store page should not.
 
 Rebuild: `VW=428 VH=926 DSF=3 SHOTS=/tmp/store/ip node scripts/phone-sim.mjs https://tunedtv.com
 $PWD/scripts/phone-sim/store-shots.mjs` (and `VW=1032 VH=1376 DSF=2` for iPad) in tuned-tv-finder,
