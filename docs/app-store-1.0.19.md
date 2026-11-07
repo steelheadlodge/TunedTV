@@ -21,25 +21,34 @@ New in TunedTV:
 • Simpler setup: pick sports, movies or both, and TunedTV sets itself up around you.
 • More reliable TV pairing and channel changes, plus fixes.
 
-## App Review notes (paste into "Notes" under App Review Information)
+## App Review notes (paste into "Notes" under App Review Information; replaces the 1.0.14 notes)
 
+```
 No account is needed. Sign in is optional.
 
-TunedTV controls TVs and cable boxes on the same Wi-Fi as the phone. If there is no
-compatible TV where you are testing, use the built-in demo TV:
-1. On first launch pick "Live sports", enter ZIP 10001, choose provider "Fios", Continue.
-   On "Your teams" pick any team (or none) and tap Continue again.
-2. On "Your TV", tap "No TV here? Try the demo TV". The remote opens with a demo screen
-   that shows each channel, app, and volume change.
-   (Later: Remote tab or Profile > My TVs > "No TV here? Try the demo TV".)
+Demo account (email/password), for the signed-in features and account deletion:
+  Email: support@tunedtv.com
+  Password: TunedTV2026!
+
+TunedTV controls TVs and cable boxes on the same Wi-Fi as the phone. If there is no compatible TV where you are testing, use the built-in demo TV:
+1. On first launch pick "Live sports", enter ZIP 10001, choose provider "Fios", Continue. On "Your teams" pick any team (or none) and tap Continue again.
+2. On "Your TV", tap "No TV here? Try the demo TV". The remote opens with a demo screen that shows each channel, app, and volume change. (Later: Remote tab or Profile > My TVs > "No TV here? Try the demo TV".)
 3. On the Sports tab, tap "Tune <channel>" on any game. The demo TV changes to that channel.
+4. Movies tab: a title's watch button opens it in that streaming app on the TV when a TV is connected, or on the phone when none is.
 
 Permissions:
-- Local Network: only to find and control the TV and TV box on the user's Wi-Fi.
+- Local Network: only to find and control the TV and TV box on the user's Wi-Fi. It connects only to devices on the user's own network. With none there, the app says no TV was found and offers the demo TV.
 - Microphone and Speech Recognition: only when the user taps the mic to talk to TunedTV.
 - Notifications: optional alerts before the user's teams play. Asked only after they pick a team.
 
-Siri: "Ask TunedTV". Control Center: "Ask TunedTV" and "TV Remote". Widget: "Next Game".
+Native iOS features: Siri ("Ask TunedTV"), Control Center ("Ask TunedTV", "TV Remote"), Lock Screen buttons, a "Next Game" widget, haptics on the remote, local-network TV control. Listings load from tunedtv.com. Sign in with Apple and Google use the native iOS SDKs.
+
+ACCOUNT DELETION (5.1.1(v))
+Sign in, then Profile > Delete account > type DELETE > Confirm. Removes the account and the user's data, and signs out.
+
+Privacy: https://tunedtv.com/privacy
+Support: support@tunedtv.com
+```
 
 ## Screenshots (replace the whole set; the 1.0.14 images show old tabs and the old Ask box)
 
