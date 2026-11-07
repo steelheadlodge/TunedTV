@@ -39,18 +39,21 @@ Siri: "Ask TunedTV". Control Center: "Ask TunedTV" and "TV Remote". Widget: "Nex
 
 ## Screenshots (replace the whole set; the 1.0.14 images show old tabs and the old Ask box)
 
-All in `app-store-screenshots/1.0.19/`, captured from the live app 2026-11-06 (Fios, 10001, demo
-TV), team logos left out. Drag in this order and delete the old ones:
+All in `app-store-screenshots/1.0.19/`, captured from the live app 2026-11-06 (demo TV). The first
+image is the lead because "the channel for tonight's game, one tap" is the reason to download; a
+plain universal remote is a crowded pitch. Drag in this order and delete the old ones:
 
 iPhone 6.5" (1284x2778):
-0. `iphone-6.5-0-one-remote.png` One remote for every TV
-1. `iphone-6.5-1-sports.png` The channel for every game, and one tap puts it on
-2. `iphone-6.5-2-ask.png` Just say it: "Put on ESPN in the living room"
-3. `iphone-6.5-3-movies.png` What to watch tonight, on the services you pay for
-4. `iphone-6.5-4-title.png` Pick a show, play it on TV, or open it on your phone
-5. `iphone-6.5-5-remote.png` No TV handy? Try the demo TV
+1. `iphone-6.5-1-sports.png` Tonight's game, your channel, and one tap puts it on
+2. `iphone-6.5-2-ask.png` Just say what you want on, and your TV changes
+3. `iphone-6.5-3-remote.png` No TV handy? Try it on the demo TV
+4. `iphone-6.5-0-one-remote.png` One remote for every TV
 
-iPad 13" (2064x2752): `ipad-13-0-one-remote.png`, `ipad-13-1-sports.png`, `ipad-13-2-movies.png`
+iPad 13" (2064x2752): `ipad-13-1-sports.png`, then `ipad-13-0-one-remote.png`
+
+Left out on purpose: the movies and title screens. Their posters and backdrop stills are
+studio-owned artwork, and TMDB's terms say they don't own those images and don't license them for
+commercial use. The app shows them to users; the store page should not.
 
 Rebuild: `VW=428 VH=926 DSF=3 SHOTS=/tmp/store/ip node scripts/phone-sim.mjs https://tunedtv.com
 $PWD/scripts/phone-sim/store-shots.mjs` (and `VW=1032 VH=1376 DSF=2` for iPad) in tuned-tv-finder,
@@ -60,16 +63,21 @@ then `python3 frame_1019.py /tmp/store/ip /tmp/store/ipad` here.
 
 - Name (26/30): `TunedTV: Remote & TV Guide`
 - Subtitle (29/30): `Universal remote for every TV`
-- Keywords (95/100): `fios,directv,roku,lg,google,cable box,channel,sports,game,where to watch,streaming,live,nba,nfl`
-  (no app names like Netflix or ESPN: Apple rejects other apps' names in keywords)
-- Promotional text (159/170, can change any time without review):
-  `Fios and DIRECTV boxes, Roku, LG and Google TV in one remote. Find the channel for tonight's
-  game and put it on in one tap, or just say what you want to watch.`
+- Keywords (95/100): `universal remote,tv remote,cable box,channel guide,live tv,sports,where to watch,streaming,game`
+  No company or brand names: guideline 2.3.7 says metadata can't be packed with trademarked terms
+  or other companies' names, and the keyword field is where that gets rejected.
+- Promotional text (147/170, can change any time without review):
+  `Your cable box and every smart TV, in one remote. Find the channel for tonight's game and put
+  it on in one tap, or just say what you want to watch.`
+
+The app's own screens name providers, channels and streaming apps, because that's how it tells you
+where to watch. That's the app doing its job. Our own words (name, subtitle, keywords, promotional
+text, screenshot captions) name nobody.
 
 ## Steps in App Store Connect
 
 1. Apps > TunedTV > "+" next to iOS App > version 1.0.19.
-2. Paste What's New. Add the two lead screenshots.
+2. Paste What's New, the subtitle, keywords and promotional text. Replace the screenshots with the set above, in order.
 3. Build: choose 1.0.19 (39) once it says "Ready to Submit" (Apple processing, usually 15-30 min).
 4. App Review Information > Notes: paste the notes above.
 5. Add for Review > Submit.

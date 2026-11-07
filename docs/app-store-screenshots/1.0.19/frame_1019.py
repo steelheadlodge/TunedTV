@@ -6,16 +6,15 @@ sys.path.insert(0, "../1.0.14")
 from frame import font, rounded
 
 IP, PAD = sys.argv[1], sys.argv[2]
+# Captions stay clear of other companies' names (App Store guideline 2.3.7). The movie and title
+# screens are left out on purpose: their posters and backdrop stills are studio-owned artwork.
 IPHONE = [
-    ("1-sports", "The channel for every game", "and one tap puts it on"),
-    ("5-ask", "Just say it", "\u201cPut on ESPN in the living room\u201d"),
-    ("2-movies", "What to watch tonight", "on the services you pay for"),
-    ("3-title", "Pick a show, play it on TV", "or open it on your phone"),
-    ("4-remote", "No TV handy?", "Try the demo TV"),
+    ("1-sports", "Tonight's game, your channel", "and one tap puts it on"),
+    ("5-ask", "Just say what you want on", "and your TV changes"),
+    ("4-remote", "No TV handy?", "Try it on the demo TV"),
 ]
 IPAD = [
-    (["1-sports", "5-ask"], "The channel for every game", "just say it, and it's on"),
-    (["2-movies", "3-title"], "What to watch tonight", "played on your TV in one tap"),
+    (["1-sports", "5-ask"], "Tonight's game, your channel", "just say it, and it's on"),
 ]
 
 
