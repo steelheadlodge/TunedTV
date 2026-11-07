@@ -54,6 +54,7 @@ Living Room TV, trailer on phone or TV. Replaces the Jaws 2 shot.
 
 `8-free` is the phone 2026-11-06 10:15 PM (after 986f9a8): Trending free movies near the top of
 Movies, one name per app ("Free · YouTube"), Netflix Top 10 under it. Same frame as `6-ontv`.
+`5-movies` is the phone 2026-11-06 10:02 PM: Browse on TV button, Discover card, Picks for you.
 
 iPad 13" (2064x2752), the real iPad capture (the app runs as one centered column there):
 1. `ipad-13-1-sports.png` Tonight's game, your channel
