@@ -52,8 +52,8 @@ iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 `6-ontv` is Apocalypse Z from the phone 2026-11-06 9:32 PM (after f6180cd): one service, Play on
 Living Room TV, trailer on phone or TV. Replaces the Jaws 2 shot.
 
-Retake after the next publish: `8-free` (Discover and In Theaters moved to the top of Movies;
-this photo still shows them low).
+`8-free` is the phone 2026-11-06 10:15 PM (after 986f9a8): Trending free movies near the top of
+Movies, one name per app ("Free · YouTube"), Netflix Top 10 under it. Same frame as `6-ontv`.
 
 iPad 13" (2064x2752), the real iPad capture (the app runs as one centered column there):
 1. `ipad-13-1-sports.png` Tonight's game, your channel
