@@ -75,12 +75,14 @@ then `python3 frame_1019.py /tmp/store/ip /tmp/store/ipad` here, then `python3 f
 
 ## Listing text (App Information / version page; all within Apple's limits)
 
-- Name (26/30): `TunedTV: Remote & TV Guide`
+- Name (26/30): `TunedTV: TV Remote & Guide`
+  Not "Remote & TV Guide": "TV Guide" as one phrase is a registered trademark (the magazine and its app).
+  Search still matches tv, remote and guide as separate words.
 - Subtitle (30/30): `The remote that finds the game`
   Not "for every TV": the app works with LG, Roku, Google TV, Fios and DIRECTV, and the TV step says so.
   Guideline 2.3.1 wants metadata to match what the app does.
 - Keywords (95/100): `universal,control,smart,where to watch,cable box,channel,live,sports,game,movies,shows,football`
-  With the name (remote, TV, guide) and subtitle this covers universal remote control, tv remote,
+  With the name (TV, remote, guide) and subtitle this covers universal remote control, tv remote,
   smart tv remote, tv guide and where to watch. "where to watch" left the name, so it is here.
   Words already in the name and subtitle (remote, TV, guide) are searched anyway, so they aren't repeated here.
   No company or brand names: guideline 2.3.7 says metadata can't be packed with trademarked terms
