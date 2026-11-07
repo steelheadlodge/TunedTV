@@ -72,7 +72,10 @@ then `python3 frame_1019.py /tmp/store/ip /tmp/store/ipad` here, then `python3 f
 - Subtitle (30/30): `The remote that finds the game`
   Not "for every TV": the app works with LG, Roku, Google TV, Fios and DIRECTV, and the TV step says so.
   Guideline 2.3.1 wants metadata to match what the app does.
-- Keywords (96/100): `universal,cable box,channel,live,sports,game,where to watch,streaming,movies,shows,cast,football`
+- Keywords (98/100): `universal,control,tv,smart,cable box,channel,live,sports,game,streaming,movies,shows,cast,football`
+  ("where to watch" is already in the name. "TunedTV" is one word to search, so "tv" goes here.
+  With "remote" in the subtitle this covers universal remote control, tv remote and smart tv remote.
+  No TV or cable brand names: guideline 2.3.7.)
   Words already in the name and subtitle (remote, TV, guide) are searched anyway, so they aren't repeated here.
   No company or brand names: guideline 2.3.7 says metadata can't be packed with trademarked terms
   or other companies' names, and the keyword field is where that gets rejected.
