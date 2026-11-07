@@ -50,7 +50,7 @@ iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 4. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
 5. `iphone-6.5-5-movies.png` What to watch tonight, picked for you
 6. `iphone-6.5-6-ontv.png` Play it on your TV, or open it on your phone
-   (the button names the TV by its model number; skip this one if that reads badly)
+   The button reads "Play on Living Room TV" (edited; the app still shows the TV's model number).
 
 iPad 13" (2064x2752): `ipad-13-1-sports.png` (the game and the real remote, side by side)
 
