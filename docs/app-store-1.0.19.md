@@ -43,13 +43,16 @@ All in `app-store-screenshots/1.0.19/`, captured from the live app 2026-11-06 (d
 image is the lead because "the channel for tonight's game, one tap" is the reason to download; a
 plain universal remote is a crowded pitch. Drag in this order and delete the old ones:
 
-iPhone 6.5" (1284x2778):
+iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 1. `iphone-6.5-1-sports.png` Tonight's game, your channel, and one tap puts it on
 2. `iphone-6.5-2-ask.png` Just say what you want on, and your TV changes
-3. `iphone-6.5-3-remote.png` No TV handy? Try it on the demo TV
-4. `iphone-6.5-0-one-remote.png` One remote for every TV
+3. `iphone-6.5-3-remote.png` The remote on your phone, your channels, one tap
+4. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
+5. `iphone-6.5-5-movies.png` What to watch tonight, picked for you
+6. `iphone-6.5-6-ontv.png` Play it on your TV, or open it on your phone
+   (the button names the TV by its model number; skip this one if that reads badly)
 
-iPad 13" (2064x2752): `ipad-13-1-sports.png`, then `ipad-13-0-one-remote.png`
+iPad 13" (2064x2752): `ipad-13-1-sports.png` (the game and the real remote, side by side)
 
 Left out on purpose: the movies and title screens. Their posters and backdrop stills are
 studio-owned artwork, and TMDB's terms say they don't own those images and don't license them for
