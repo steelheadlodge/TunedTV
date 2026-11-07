@@ -49,11 +49,11 @@ iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 6. `iphone-6.5-8-free.png` Free movies, no subscription
 7. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
 
-Retake after the next publish, so they match what the reviewer sees:
-- `6-ontv`: a title on more than one service now shows "Choose where to watch" instead of one
-  Play button, and the trailer button now says phone or TV. Pick a title on one service, or
-  shoot the new choice list. The Jaws 2 art is also the most studio-owned image in the set.
-- `8-free`: Discover and In Theaters moved to the top of Movies; this photo still shows them low.
+`6-ontv` is Apocalypse Z from the phone 2026-11-06 9:32 PM (after f6180cd): one service, Play on
+Living Room TV, trailer on phone or TV. Replaces the Jaws 2 shot.
+
+Retake after the next publish: `8-free` (Discover and In Theaters moved to the top of Movies;
+this photo still shows them low).
 
 iPad 13" (2064x2752), the real iPad capture (the app runs as one centered column there):
 1. `ipad-13-1-sports.png` Tonight's game, your channel
