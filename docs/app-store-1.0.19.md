@@ -1,7 +1,8 @@
 # App Store submission: 1.0.19 (build 39)
 
 Build: tag `tunedtv-1.0.19-39` (commit 8668bce), uploaded by EAS Submit 2026-11-06.
-The app loads tunedtv.com, so the web features below are already live for every user.
+The app loads tunedtv.com, so web changes reach every user when tuned-tv-finder is published.
+Publish before submitting: the reviewer sees whatever tunedtv.com serves that day.
 
 ## What's New (paste into "What's New in This Version")
 
@@ -13,11 +14,6 @@ New in TunedTV:
 • Simpler setup: pick sports, movies or both, and TunedTV sets itself up around you.
 • Fixes and improvements.
 
-## Promotional text (optional, 170)
-
-Change the channel on your cable box, open Netflix on your TV, and find the right channel
-for tonight's game. One remote for LG, Roku, Google TV, Fios and DIRECTV.
-
 ## App Review notes (paste into "Notes" under App Review Information)
 
 No account is needed. Sign in is optional.
@@ -25,6 +21,7 @@ No account is needed. Sign in is optional.
 TunedTV controls TVs and cable boxes on the same Wi-Fi as the phone. If there is no
 compatible TV where you are testing, use the built-in demo TV:
 1. On first launch pick "Live sports", enter ZIP 10001, choose provider "Fios", Continue.
+   On "Your teams" pick any team (or none) and tap Continue again.
 2. On "Your TV", tap "No TV here? Try the demo TV". The remote opens with a demo screen
    that shows each channel, app, and volume change.
    (Later: Remote tab or Profile > My TVs > "No TV here? Try the demo TV".)
@@ -52,19 +49,30 @@ iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 6. `iphone-6.5-8-free.png` Free movies, no subscription
 7. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
 
-`iphone-6.5-8-free.png` is his phone, cropped so the cut-off row above and the TMDB legal block are gone. The free row is the pitch. Discover and In Theaters still sit at the bottom of that photo; the app is moving them up, so retake this one frame after the next publish if the store shots should match the new layout.
+Retake after the next publish, so they match what the reviewer sees:
+- `6-ontv`: a title on more than one service now shows "Choose where to watch" instead of one
+  Play button, and the trailer button now says phone or TV. Pick a title on one service, or
+  shoot the new choice list. The Jaws 2 art is also the most studio-owned image in the set.
+- `8-free`: Discover and In Theaters moved to the top of Movies; this photo still shows them low.
 
-iPad 13" (2064x2752): `ipad-13-1-sports.png` (the game and the real remote, side by side)
+iPad 13" (2064x2752), the real iPad capture (the app runs as one centered column there):
+1. `ipad-13-1-sports.png` Tonight's game, your channel
+2. `ipad-13-2-remote.png` The remote for your TV
+Not two phone screens side by side: App Review rejects iPad shots that show iPhone screens.
 
 Rebuild: `VW=428 VH=926 DSF=3 SHOTS=/tmp/store/ip node scripts/phone-sim.mjs https://tunedtv.com
 $PWD/scripts/phone-sim/store-shots.mjs` (and `VW=1032 VH=1376 DSF=2` for iPad) in tuned-tv-finder,
-then `python3 frame_1019.py /tmp/store/ip /tmp/store/ipad` here.
+then `python3 frame_1019.py /tmp/store/ip /tmp/store/ipad` here, then `python3 fix_1019.py /tmp/store/ipad`
+(captions clear of the frame, no TMDB block on the ask shot, real iPad screens).
 
 ## Listing text (App Information / version page; all within Apple's limits)
 
 - Name (26/30): `TunedTV: Remote & TV Guide`
-- Subtitle (29/30): `Universal remote for every TV`
-- Keywords (95/100): `universal remote,tv remote,cable box,channel guide,live tv,sports,where to watch,streaming,game`
+- Subtitle (30/30): `The remote that finds the game`
+  Not "for every TV": the app works with LG, Roku, Google TV, Fios and DIRECTV, and the TV step says so.
+  Guideline 2.3.1 wants metadata to match what the app does.
+- Keywords (96/100): `universal,cable box,channel,live,sports,game,where to watch,streaming,movies,shows,cast,football`
+  Words already in the name and subtitle (remote, TV, guide) are searched anyway, so they aren't repeated here.
   No company or brand names: guideline 2.3.7 says metadata can't be packed with trademarked terms
   or other companies' names, and the keyword field is where that gets rejected.
 - Promotional text (147/170, can change any time without review):
@@ -77,6 +85,7 @@ text, screenshot captions) name nobody.
 
 ## Steps in App Store Connect
 
+0. Publish tuned-tv-finder (Lovable) so tunedtv.com has tonight's fixes.
 1. Apps > TunedTV > "+" next to iOS App > version 1.0.19.
 2. Paste What's New, the subtitle, keywords and promotional text. Replace the screenshots with the set above, in order.
 3. Build: choose 1.0.19 (39) once it says "Ready to Submit" (Apple processing, usually 15-30 min).
