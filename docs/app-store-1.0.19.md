@@ -79,16 +79,43 @@ then `python3 frame_1019.py /tmp/store/ip /tmp/store/ipad` here, then `python3 f
 - Subtitle (30/30): `The remote that finds the game`
   Not "for every TV": the app works with LG, Roku, Google TV, Fios and DIRECTV, and the TV step says so.
   Guideline 2.3.1 wants metadata to match what the app does.
-- Keywords (98/100): `universal,control,tv,smart,cable box,channel,live,sports,game,streaming,movies,shows,cast,football`
-  ("where to watch" is already in the name. "TunedTV" is one word to search, so "tv" goes here.
-  With "remote" in the subtitle this covers universal remote control, tv remote and smart tv remote.
-  No TV or cable brand names: guideline 2.3.7.)
+- Keywords (95/100): `universal,control,smart,where to watch,cable box,channel,live,sports,game,movies,shows,football`
+  With the name (remote, TV, guide) and subtitle this covers universal remote control, tv remote,
+  smart tv remote, tv guide and where to watch. "where to watch" left the name, so it is here.
   Words already in the name and subtitle (remote, TV, guide) are searched anyway, so they aren't repeated here.
   No company or brand names: guideline 2.3.7 says metadata can't be packed with trademarked terms
   or other companies' names, and the keyword field is where that gets rejected.
-- Promotional text (147/170, can change any time without review):
-  `Your cable box and every smart TV, in one remote. Find the channel for tonight's game and put
-  it on in one tap, or just say what you want to watch.`
+- Promotional text (140/170, can change any time without review):
+  `Your cable box and smart TV in one remote. Find the channel for tonight's game and put it on in one tap, or just say what you want to watch.`
+  (Was "every smart TV": not every TV works, guideline 2.3.1.)
+
+- Description (replaces the 1.0.14 "where to watch" text):
+
+```
+The channel for tonight's game, and the remote to put it on.
+
+TunedTV knows which channel every game is on with your TV provider, and changes your TV or cable box to it in one tap. Or just say what you want to watch.
+
+LIVE SPORTS
+• The exact channel number for every game on your TV provider
+• Your teams first, plus a Next Game widget
+• One tap tunes your cable box or opens the right app on your TV
+
+THE REMOTE ON YOUR PHONE
+• Channels, apps, volume and arrows, or a swipe pad
+• Works over your Wi-Fi with many smart TVs, streaming players and cable boxes
+• No TV handy? Try the demo TV and see what every button does
+• Siri, Control Center and Lock Screen buttons
+
+WHAT TO WATCH
+• Picks for you from the services you already have
+• See where any movie or show is streaming, and play it on your TV in one tap
+• Free movies and shows, no subscription
+• Browse the listings on your TV and scroll from your phone
+• Away from home? Titles open on your phone instead
+
+No account needed.
+```
 
 The app's own screens name providers, channels and streaming apps, because that's how it tells you
 where to watch. That's the app doing its job. Our own words (name, subtitle, keywords, promotional
