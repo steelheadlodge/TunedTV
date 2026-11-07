@@ -49,7 +49,10 @@ iPhone 6.5" (1284x2778), from the real phone 2026-11-06, status bar removed:
 3. `iphone-6.5-3-remote.png` The remote on your phone, your channels, one tap
 4. `iphone-6.5-6-ontv.png` Play it on your TV, or open it on your phone
 5. `iphone-6.5-5-movies.png` What to watch tonight, picked for you
-6. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
+6. `iphone-6.5-8-free.png` Free movies, no subscription
+7. `iphone-6.5-7-swipe.png` Prefer to swipe? Tap the corner to switch
+
+`iphone-6.5-8-free.png` is his phone, cropped so the cut-off row above and the TMDB legal block are gone. The free row is the pitch. Discover and In Theaters still sit at the bottom of that photo; the app is moving them up, so retake this one frame after the next publish if the store shots should match the new layout.
 
 iPad 13" (2064x2752): `ipad-13-1-sports.png` (the game and the real remote, side by side)
 
