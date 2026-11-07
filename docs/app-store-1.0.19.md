@@ -7,12 +7,19 @@ Publish before submitting: the reviewer sees whatever tunedtv.com serves that da
 ## What's New (paste into "What's New in This Version")
 
 New in TunedTV:
+• Play it on your TV: pick a movie or show and it opens in the right app on your TV. Away from home, it opens on your phone instead.
+• Browse on TV: put the Movies listings on your TV and scroll on your phone. The TV follows along.
+• Choose where to watch when a title is on more than one service, with the ones you have first.
+• Free movies and shows, no subscription, near the top of Movies.
+• Genre pages: tap Comedy, Horror, Romance and more to see everything in that genre.
+• Trailers play on your phone or on your TV.
+• Swipe pad: a touchpad remote, one tap from the arrow buttons.
 • No TV handy? Try the demo TV. It shows what every button does, right on your phone.
 • Siri: ask TunedTV to put on a game, a channel or an app.
 • Control Center and Lock Screen buttons for Ask TunedTV and TV Remote, plus a Next Game widget.
 • Talk to TunedTV with the mic, and feel each tap on the remote.
 • Simpler setup: pick sports, movies or both, and TunedTV sets itself up around you.
-• Fixes and improvements.
+• More reliable TV pairing and channel changes, plus fixes.
 
 ## App Review notes (paste into "Notes" under App Review Information)
 
