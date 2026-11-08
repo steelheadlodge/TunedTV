@@ -35,6 +35,8 @@ import {
 } from '@/lib/pushNotifications';
 import { handleNativeExtrasMessage, NATIVE_CAPS_SCRIPT } from '@/lib/nativeExtras';
 import { handleNetMessage, resetNet } from '@/lib/netBridge';
+import * as Device from 'expo-device';
+import { TvScreenApp } from '@/components/TvScreenApp';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -168,7 +170,14 @@ function buildSetSessionScript(params: Record<string, string>, resultUrl: string
   `;
 }
 
-export default function HomeScreen() {
+// Android TV / Google TV: the app is the TV page (components/TvScreenApp).
+const IS_TV = Platform.OS === 'android' && Device.deviceType === Device.DeviceType.TV;
+
+export default function Home() {
+  return IS_TV ? <TvScreenApp /> : <HomeScreen />;
+}
+
+function HomeScreen() {
   const insets = useSafeAreaInsets();
   const webViewRef = useRef<WebView>(null);
   const nativeAuthInProgress = useRef(false);
