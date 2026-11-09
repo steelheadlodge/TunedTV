@@ -566,6 +566,9 @@ function HomeScreen() {
         automaticallyAdjustContentInsets={false}
         contentInsetAdjustmentBehavior="never"
         scalesPageToFit={false}
+        // The remote's typing bar opens when the TV's keyboard does (Google sign-in on a Fios box):
+        // iOS only raises the phone's keyboard for a focus without a tap when this is off.
+        keyboardDisplayRequiresUserAction={false}
         injectedJavaScriptBeforeContentLoaded={Platform.OS === 'ios' ? IOS_WEBVIEW_INJECT : undefined}
         onContentProcessDidTerminate={() => {
           // WKWebView content process was killed (iOS, typically memory pressure).
