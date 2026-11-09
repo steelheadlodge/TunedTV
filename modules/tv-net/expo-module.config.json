@@ -11,7 +11,8 @@
   },
   "android": {
     "modules": [
-      "com.tunedtv.tvnet.TvNetModule"
+      "com.tunedtv.tvnet.TvNetModule",
+      "com.tunedtv.tvnet.TvScreenModule"
     ]
   }
 }

@@ -26,13 +26,20 @@ export const NATIVE_CAPS = [
   'tv',
   'haptic',
   ...(netAvailable() ? ['net'] : []),
-  ...(Platform.OS === 'ios' && TvScreen ? ['airplay'] : []),
+  // iOS: AirPlay. Android: Smart View / Miracast. The page words its steps by platform.
+  ...(TvScreen ? ['airplay'] : []),
   ...(speechAvailable() ? ['speech'] : []),
 ];
 
 export const NATIVE_CAPS_SCRIPT = `
   (function () {
     try {
+      // Android's injected bridge throws when postMessage is called detached from it, and web
+      // builds before 2026-11-08 did exactly that, so hand the page a plain function.
+      var rn = window.ReactNativeWebView;
+      if (rn && !rn.__tunedtvBound) {
+        window.ReactNativeWebView = { postMessage: function (m) { rn.postMessage(String(m)); }, __tunedtvBound: true };
+      }
       window.__tunedtvNativeCaps = ${JSON.stringify(NATIVE_CAPS)};
       window.dispatchEvent(new CustomEvent('tunedtv:native-caps'));
     } catch (e) {}

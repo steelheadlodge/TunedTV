@@ -42,5 +42,5 @@ type TvScreenNative = {
   addListener(event: 'onScreenChange', cb: (e: TvScreenState) => void): EventSubscription;
 };
 
-/** AirPlay second screen (iOS). Null in builds without it. */
+/** The mirrored TV as a second screen (iOS AirPlay, Android Smart View / Miracast). Null in builds without it. */
 export const TvScreen = requireOptionalNativeModule<TvScreenNative>('TvScreen');
