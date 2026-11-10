@@ -3,6 +3,10 @@
 One store review cycle per platform. Web changes keep shipping without a build; this list is
 only what needs the native shell. Do not upload to Apple from an agent: Andrew submits.
 
+**Keep this list current (Andrew, 2026-11-10):** anything found that needs the iOS or Android
+shell goes here the same day, under iOS, Android or both. Web work that turned out *not* to need
+a build goes under "Checked: no build needed", so nobody waits on a build for it.
+
 Order: Apple approves 1.0.19, Google approves Android 1.0.19 (first Android TV release), then
 these go into 1.0.20 on both.
 
@@ -14,6 +18,22 @@ these go into 1.0.20 on both.
 - **Android TV / Google TV app** (2a703e2): opens TunedTV's TV page full screen.
 - **iOS keyboard** (51ae3fd): the web remote raises the keyboard when the TV's keyboard opens.
 - After Google approves: flip `TV_APP_ON_PLAY=true` in tuned-tv-finder `ShowOnTvButton.tsx`.
+
+## Still to add (found, not in the tree yet)
+
+- **iOS multicast entitlement** (`com.apple.developer.networking.multicast`): needed for the /24
+  Wake-on-LAN broadcast (unicast already works). Request it from Apple first (form, not instant),
+  then turn the capability on for the bundle ID before the build. Any new entitlement needs its
+  capability on first (see tuned-tv-finder AGENTS.md, build 34).
+
+## Checked: no build needed
+
+- **Apple TV remote** (tuned-tv-finder `fff3066`, 2026-11-10): pairing, keys, app list, title
+  links, all web-side over the `net` cap. `_companion-link._tcp` has been in `NSBonjourServices`
+  since 1.0.15, and Android mDNS takes any type. Ships by flipping `tested` in
+  `src/lib/tv/drivers/appletv.ts` once tried from a phone on 1.0.15+.
+- **Samsung TunedTV TV app** (`samsung/` in tuned-tv-finder): a TV app, not the phone shell. Goes
+  through Samsung Seller Office (Andrew submits), separate from this build.
 
 ## Remote outside the app (agreed 2026-11-09)
 
@@ -32,11 +52,13 @@ real floating bubble.
 3. **Home Screen widget** (interactive, iOS 17+): same buttons plus up to 3 favorite channels.
 
 The intents run in the extension, not the web view: the TV control code they need (Roku ECP,
-LG SSAP, Samsung, Android TV remote, Fios box) has to be callable from Swift or through an App
+LG SSAP, Samsung, Android TV remote, Fios box, Apple TV) has to be callable from Swift or through an App
 Group handoff to the app. Decide in the build: (a) small native sender per brand in the
 extension, or (b) intent opens the app in the background (`openAppWhenRun = false` +
 `ForegroundContinuableIntent` fallback). Measure the press-to-TV delay on the living room LG +
-Fios box before choosing.
+Fios box before choosing. Apple TV leans to (b): its Companion protocol is encrypted
+(SRP pairing, ChaCha20) and the pairing keys live in the web's localStorage, so a native sender
+would need its own crypto plus the keys shared through the App Group.
 
 ### Android
 
@@ -56,8 +78,8 @@ foreground service type needs the matching declaration.
   the Live Activity / notification shows it and knows where to send keys.
 - Settings: Profile → TV Remote → "Remote outside the app" switch (on by default on iOS, asks
   for the overlay permission on Android).
-- Test on hardware before submit: living room LG + Fios box, bedroom Samsung + Fios box, garage
-  Roku. Press each button from the Lock Screen / Dynamic Island / bubble with TunedTV closed.
+- Test on hardware before submit: living room LG + Fios box + Apple TV (LG HDMI1), bedroom
+  Samsung + Fios box, garage Roku. Press each button from the Lock Screen / Dynamic Island / bubble with TunedTV closed.
 
 ## Dedicated remote mode (agreed 2026-11-09)
 
