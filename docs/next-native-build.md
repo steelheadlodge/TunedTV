@@ -59,6 +59,35 @@ foreground service type needs the matching declaration.
 - Test on hardware before submit: living room LG + Fios box, bedroom Samsung + Fios box, garage
   Roku. Press each button from the Lock Screen / Dynamic Island / bubble with TunedTV closed.
 
+## Dedicated remote mode (agreed 2026-11-09)
+
+A phone or tablet that is only a TV remote (an old iPhone, an iPad on the couch, a spare Android
+phone). The web already has Profile → TV Remote → **Remote mode** (opens straight to the main
+TV's remote, web Wake Lock on iOS 18.4+). The build makes it a real dedicated device:
+
+- **Opens to the remote, every time**: cold start, return from background, after a reboot. No
+  Sports/Movies tabs; one small Settings corner (held 2 s) to leave the mode.
+- **Screen stays usable**: `expo-keep-awake` while on; after a few idle minutes it dims to a
+  near-black remote (OLED-friendly) and wakes full bright on touch or pickup. Plugged in: never
+  sleeps. On battery: lets the device sleep after a longer idle so it isn't dead by morning.
+- **Always connected**: reconnects to the TV and box as soon as it wakes; shows the TV's state
+  (on, input, what's on) without a tap.
+- **Locked to the remote**:
+  - iOS: Guided Access can't be turned on by an app, so the mode walks the owner through it
+    once (Settings → Accessibility → Guided Access, triple-click to start). Orientation lock.
+  - Android: screen pinning (`startLockTask`) after one confirm; optional "Use TunedTV as the
+    Home app" so the device boots into the remote. Device-owner kiosk stays out of scope.
+- **Bigger pad**: the full remote at device size (iPad gets two columns: pad + apps/channels),
+  haptics on every press, volume rocker on the side controls TV volume (Android
+  `dispatchKeyEvent`; iOS can't take the hardware volume buttons, so the on-screen VOL stays).
+- **No account needed on the remote device**: pair it from the main phone (show a code or QR
+  on the main phone; the remote device copies its TVs and boxes). Signed-out mode keeps working.
+- **Shared with the outside-the-app work**: the native TV senders built for the Live Activity /
+  bubble are what make keys instant here too.
+
+Test on hardware: a spare iPhone and an iPad as the living room remote for a full evening
+(LG + Fios box): battery drain, dim/wake, reconnect after the TV sleeps, Guided Access exit.
+
 ## Also waiting on a build
 
-- `expo-keep-awake` for Remote mode (web Wake Lock covers iOS 18.4+ only).
+- `expo-keep-awake` (now part of Dedicated remote mode above).
