@@ -88,6 +88,29 @@ TV's remote, web Wake Lock on iOS 18.4+). The build makes it a real dedicated de
 Test on hardware: a spare iPhone and an iPad as the living room remote for a full evening
 (LG + Fios box): battery drain, dim/wake, reconnect after the TV sleeps, Guided Access exit.
 
+## Remote left open for channel surfing (agreed 2026-11-09)
+
+Any phone, not only a dedicated remote. Today (web): Remote mode holds the screen awake with the
+Screen Wake Lock (iOS 18.4+); without it the phone sleeps on its own Auto-Lock.
+
+Native build (`expo-keep-awake` + `expo-brightness`), on when Remote mode is on:
+
+- **Awake only while it's useful**: held while the remote is on screen and the TV is on. Let go
+  when the TV turns off, the app goes to the background, or after 20 min with no press (the
+  phone's own Auto-Lock takes over from there).
+- **Dim between presses**: after 45 s with no press the screen drops to ~10% brightness and the
+  remote turns near-black (OLED pixels off); the first touch only wakes it (no key sent) and
+  restores the brightness the person had. Never brighter than they set it.
+- **Quiet while dim**: TV state polling (LG power every 30 s, now-playing) pauses while dimmed
+  and resumes on wake; the TV connection stays open so the first key is instant.
+- **Low Power Mode / Battery Saver**: dim after 20 s and let go after 10 min.
+- **Plugged in**: no dim timeout and no let-go (charging dock use).
+- Settings under Remote mode: "Dim after" (20 s / 45 s / 2 min / never) and "Stay awake for"
+  (10 / 20 / 60 min / while TV is on).
+
+Measure before submit: battery used per hour with the remote open on the living room LG + Fios
+box, dim on vs off, iPhone and Android.
+
 ## Also waiting on a build
 
 - `expo-keep-awake` (now part of Dedicated remote mode above).
