@@ -21,6 +21,11 @@ these go into 1.0.20 on both.
 
 ## Still to add (found, not in the tree yet)
 
+- **TunedTV Plus in-app purchase** (2026-11-10): RevenueCat + StoreKit / Play Billing, `plus`
+  cap to the web, Restore purchases. Plan: `docs/plus-and-marketing-1.0.20.md`. Proposed split:
+  1.0.20 = Plus + what is already in the tree; remote outside the app and dedicated remote mode
+  move to 1.0.21.
+
 - **iOS multicast entitlement** (`com.apple.developer.networking.multicast`): needed for the /24
   Wake-on-LAN broadcast (unicast already works). Request it from Apple first (form, not instant),
   then turn the capability on for the bundle ID before the build. Any new entitlement needs its
