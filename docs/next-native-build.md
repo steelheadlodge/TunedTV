@@ -21,10 +21,11 @@ these go into 1.0.20 on both.
 
 ## Still to add (found, not in the tree yet)
 
-- **TunedTV Plus in-app purchase** (2026-11-10): RevenueCat + StoreKit / Play Billing, `plus`
-  cap to the web, Restore purchases. Plan: `docs/plus-and-marketing-1.0.20.md`. Proposed split:
-  1.0.20 = Plus + what is already in the tree; remote outside the app and dedicated remote mode
-  move to 1.0.21.
+- **TunedTV Plus in-app purchase** (agreed 2026-11-10): `src/lib/plus.ts` (RevenueCat,
+  react-native-purchases 11.0.1) answers the page's `tunedtv:plus:status|buy|restore`; `iap` cap
+  only when an SDK key is set. Needs products + RevenueCat keys first: `docs/app-store-1.0.20.md`.
+  Split agreed: 1.0.20 = Plus + what is already in the tree; remote outside the app, dedicated
+  remote mode and keep-awake move to 1.0.21.
 
 - **iOS multicast entitlement** (`com.apple.developer.networking.multicast`): needed for the /24
   Wake-on-LAN broadcast (unicast already works). Request it from Apple first (form, not instant),

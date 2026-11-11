@@ -34,6 +34,7 @@ import {
   type PushRegistration,
 } from '@/lib/pushNotifications';
 import { handleNativeExtrasMessage, NATIVE_CAPS_SCRIPT } from '@/lib/nativeExtras';
+import { handlePlusMessage } from '@/lib/plus';
 import { handleNetMessage, resetNet } from '@/lib/netBridge';
 import * as Device from 'expo-device';
 import { TvScreenApp } from '@/components/TvScreenApp';
@@ -633,6 +634,9 @@ function HomeScreen() {
               return;
             }
             if (handleNativeExtrasMessage(message, inject)) {
+              return;
+            }
+            if (handlePlusMessage(message, inject)) {
               return;
             }
           } catch {

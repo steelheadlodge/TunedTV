@@ -3,6 +3,7 @@ import * as Haptics from 'expo-haptics';
 import * as StoreReview from 'expo-store-review';
 import { ExpoSpeechRecognitionModule } from 'expo-speech-recognition';
 import { netAvailable } from '@/lib/netBridge';
+import { PLUS_AVAILABLE } from '@/lib/plus';
 import { TvScreen, type TvScreenState } from '../../modules/tv-net';
 import { handleTvRequest, type TvRequest, type TvResult } from '@/lib/tvControl';
 
@@ -29,6 +30,7 @@ export const NATIVE_CAPS = [
   // iOS: AirPlay. Android: Smart View / Miracast. The page words its steps by platform.
   ...(TvScreen ? ['airplay'] : []),
   ...(speechAvailable() ? ['speech'] : []),
+  ...(PLUS_AVAILABLE ? ['iap'] : []),
 ];
 
 export const NATIVE_CAPS_SCRIPT = `
