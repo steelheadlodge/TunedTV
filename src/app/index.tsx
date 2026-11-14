@@ -219,11 +219,16 @@ function HomeScreen() {
   // buildFreshRootUrl) — this is the core defense against the stale-WebView ChunkLoadError trap.
   const [webUri, setWebUri] = useState(buildFreshRootUrl);
 
-  // Backstop reload after a long background. Lowered from 30m: iOS can silently jettison the
-  // content process well before then; the resume heartbeat below is the primary detector.
-  const STALE_BACKGROUND_MS = 10 * 60 * 1000;
+  // Backstop reload after a long background. The resume heartbeat below catches a dead page;
+  // a live one comes back as it was left, remote and all. 10 minutes reloaded the app after
+  // every show, so the remote had to be found again (2026-11-13).
+  const STALE_BACKGROUND_MS = 8 * 60 * 60 * 1000;
   // No response to the resume ping within this window ⇒ assume a dead/blank web view, reload.
   const HEARTBEAT_TIMEOUT_MS = 2500;
+  // While in front: a page that stops answering (hung, or its process gone with no callback)
+  // froze the app until it was force-quit (2026-11-13). Pinged this often, reloaded after this long.
+  const WATCHDOG_EVERY_MS = 5000;
+  const WATCHDOG_TIMEOUT_MS = 10000;
 
   const reloadWebView = useCallback(() => {
     contentProcessGone.current = false;
@@ -236,7 +241,7 @@ function HomeScreen() {
     setWebUri(buildFreshRootUrl());
   }, []);
 
-  const checkWebViewAlive = useCallback(() => {
+  const checkWebViewAlive = useCallback((timeoutMs = HEARTBEAT_TIMEOUT_MS, keepPending = false) => {
     // iOS-only: detect a silently-killed WKWebView content process. Inject a ping; if no 'pong'
     // message arrives shortly, JS isn't running (blank page), so we hard-reload. The pong is
     // cleared in onMessage. A false positive on a slow device just triggers a cache-busted reload.
@@ -244,12 +249,13 @@ function HomeScreen() {
       return;
     }
     if (heartbeatTimeoutRef.current) {
+      if (keepPending) return;
       clearTimeout(heartbeatTimeoutRef.current);
     }
     heartbeatTimeoutRef.current = setTimeout(() => {
       heartbeatTimeoutRef.current = null;
       reloadWebView();
-    }, HEARTBEAT_TIMEOUT_MS);
+    }, timeoutMs);
     webViewRef.current?.injectJavaScript(
       "(function(){try{window.ReactNativeWebView&&window.ReactNativeWebView.postMessage('tunedtv:pong');}catch(e){}})();true;",
     );
@@ -388,6 +394,15 @@ function HomeScreen() {
       }
     };
   }, [reloadWebView, checkWebViewAlive, nudgeWebViewLayout]);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (AppState.currentState === 'active' && webLoadedRef.current) {
+        checkWebViewAlive(WATCHDOG_TIMEOUT_MS, true);
+      }
+    }, WATCHDOG_EVERY_MS);
+    return () => clearInterval(id);
+  }, [checkWebViewAlive]);
 
   const stopWebViewOAuth = useCallback(() => {
     webViewRef.current?.stopLoading();

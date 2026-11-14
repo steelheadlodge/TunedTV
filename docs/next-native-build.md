@@ -12,6 +12,8 @@ these go into 1.0.20 on both.
 
 ## Already in the tree
 
+- **Frozen app recovers by itself + remote survives a movie** (2026-11-13): while in front the shell pings the page every 5 s and reloads it after 10 s with no answer (Andrew's iPhone froze after a 70-minute background and needed a force-quit). Coming back within 8 hours keeps the page as it was (was 10 minutes, which reloaded the app and closed the remote after every show); a dead page is still caught by the resume ping.
+
 - **Mirroring, Android** (0888d44): the TV page draws on the display Android gives apps while
   mirroring (Smart View, Miracast to Samsung, LG, Roku, Fire TV). Same `airplay` cap as iOS
   AirPlay. Built as EAS a18ed2be; rebuild if anything below lands first.
